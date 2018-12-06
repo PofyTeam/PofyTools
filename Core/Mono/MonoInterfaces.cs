@@ -1,5 +1,6 @@
 ﻿namespace PofyTools
 {
+    using System.Collections.Generic;
     using UnityEngine;
 
     public interface ICollidable
@@ -13,6 +14,8 @@
         {
             get;
         }
+
+        List<Collider> AllColliders { get; }
     }
 
     public interface ICollidable2D
@@ -30,7 +33,7 @@
 
     public interface ITransformable
     {
-        Transform SelfTransform
+        Transform transform
         {
             get;
         }
@@ -38,10 +41,8 @@
 
     public interface IRenderable
     {
-        MeshRenderer SelfRenderer
-        {
-            get;
-        }
+        Renderer SelfRenderer { get; }
+        List<Renderer> AllRenderers { get; }
     }
 
     public interface IRenderable2D
@@ -54,7 +55,7 @@
 
     public interface IAnimated
     {
-        Animator  SelfAnimator
+        Animator SelfAnimator
         {
             get;
         }
@@ -140,7 +141,7 @@
         {
             get;
         }
-
+        
         bool Initialize();
     }
 
@@ -160,13 +161,13 @@
     {
         void Toggle();
 
-        void Toggle (bool on);
+        void Toggle(bool on);
 
         void Close();
 
         void Open();
 
-        bool IsOpen{ get; }
+        bool IsOpen { get; }
     }
 
     public interface IActivatable

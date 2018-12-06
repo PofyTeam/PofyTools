@@ -37,6 +37,7 @@
 
         public List<ISocketable> Items { get { return this._items; } }
         public bool IsEmpty { get { return this._items.Count == 0; } }
+        public bool HasAnyItem { get { return !this.IsEmpty; } }
         public int ItemCount { get { return this._items.Count; } }
 
         /// <summary>
@@ -86,20 +87,6 @@
             return false;
         }
 
-        #region ITransformable implementation
-
-        protected Transform _selfTransform;
-
-        public Transform SelfTransform
-        {
-            get
-            {
-                return this._selfTransform;
-            }
-        }
-
-        #endregion
-
         #region IInitializable implementation
 
         public bool Initialize()
@@ -112,11 +99,10 @@
                 if (this.owner != null)
                 {
                     this.owner.AddSocket(this);
-                    this._selfTransform = this.transform;
 
                     ISocketable item = null;
                     SocketActionRequest request = default(SocketActionRequest);
-                    foreach (Transform child in this._selfTransform)
+                    foreach (Transform child in this.transform)
                     {
                         item = child.GetComponent<ISocketable>();
 
@@ -264,7 +250,7 @@
         {
             get
             {
-                return this.approvedBy.Has(ApprovedBy.SocketOwner) && this.approvedBy.Has(ApprovedBy.Item);
+                return this.approvedBy.HasFlag(ApprovedBy.SocketOwner) && this.approvedBy.HasFlag(ApprovedBy.Item);
             }
         }
 
@@ -348,9 +334,9 @@
         {
             if (!request.isAprovedByAll)
             {
-                if (!request.approvedBy.Has(ApprovedBy.SocketOwner))
+                if (!request.approvedBy.HasFlag(ApprovedBy.SocketOwner))
                     request = request.owner.ResolveRequest(request);
-                if (!request.approvedBy.Has(ApprovedBy.Item))
+                if (!request.approvedBy.HasFlag(ApprovedBy.Item))
                     request = request.item.ResolveRequest(request);
             }
 
@@ -379,10 +365,10 @@
 
             if (request.action == Socket.Action.Add || request.action == Socket.Action.Remove)
             {
-                if (!request.approvedBy.Has(SocketActionRequest.ApprovedBy.SocketOwner))
+                if (!request.approvedBy.HasFlag(SocketActionRequest.ApprovedBy.SocketOwner))
                     request = request.owner.ResolveRequest(request);
 
-                if (request.approvedBy.Has(SocketActionRequest.ApprovedBy.SocketOwner))
+                if (request.approvedBy.HasFlag(SocketActionRequest.ApprovedBy.SocketOwner))
                 {
                     if (request.action == Socket.Action.Add)
                         request.owner.AddSocket(request.socket);
@@ -432,7 +418,7 @@
 
         Socket GetSocket(string id);
 
-        List<string> GetIds();
+        List<string> GetSocketIds();
 
         List<ISocketable> GetItems();
 

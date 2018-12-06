@@ -261,10 +261,10 @@ namespace Extensions
     public static class EnumerationExtensions
     {
 
-        public static bool Has<T>(this System.Enum type, T value)
-        {
-            return (((int)(object)type & (int)(object)value) == (int)(object)value);
-        }
+        //public static bool HasFlag<T>(this System.Enum type, T value)
+        //{
+        //    return (((int)(object)type & (int)(object)value) == (int)(object)value);
+        //}
 
         public static bool Is<T>(this System.Enum type, T value)
         {
@@ -446,7 +446,13 @@ namespace Extensions
             rgb.isKinematic = false;
             rgb.interpolation = RigidbodyInterpolation.Interpolate;
         }
-
+        public static void EnableGravity(this Rigidbody rgb, Vector3 velocity)
+        {
+            rgb.useGravity = true;
+            rgb.isKinematic = false;
+            rgb.interpolation = RigidbodyInterpolation.Interpolate;
+            rgb.velocity = velocity;
+        }
         public static void DisableGravity(this Rigidbody rgb)
         {
             rgb.useGravity = false;
@@ -485,8 +491,11 @@ namespace Extensions
 
     public static class Vector3Extenstion
     {
+        public static float Average(this Vector3 vector)
+        {
+            return (vector[0] + vector[1] + vector[2]) / 3f;
+        }
 
-        #region Public Methods
         /// <summary>
         /// Get distance between two vectors
         /// </summary>
@@ -540,7 +549,6 @@ namespace Extensions
         //    return (v.x < number && v.y > number) || (v.x == v.y && v.x == number);
 
         //}
-        #endregion
 
     }
 }

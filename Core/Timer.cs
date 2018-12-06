@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace PofyTools
 {
-    public delegate void TimerDelegate (Timer timer);
+    public delegate void TimerDelegate(Timer timer);
 
     public class Timer : IInitializable
     {
@@ -19,9 +19,9 @@ namespace PofyTools
         }
 
         #region Constructors
-        public Timer (string id) : this (id, 0f) { }
+        public Timer(string id) : this(id, 0f) { }
 
-        public Timer (string id, float countDownDuration)
+        public Timer(string id, float countDownDuration)
         {
             this._id = id;
             this._timerDuration = countDownDuration;
@@ -33,7 +33,7 @@ namespace PofyTools
         #region Event
         protected TimerDelegate _onEvent = null;
 
-        protected void IdleEventListener (Timer timer)
+        protected void IdleEventListener(Timer timer)
         {
         }
 
@@ -41,7 +41,7 @@ namespace PofyTools
         /// Adds the event listener.
         /// </summary>
         /// <param name="listener">Listener.</param>
-        public void AddEventListener (TimerDelegate listener)
+        public void AddEventListener(TimerDelegate listener)
         {
             this._onEvent += listener;
         }
@@ -50,7 +50,7 @@ namespace PofyTools
         /// Removes the event listener.
         /// </summary>
         /// <param name="listener">Listener.</param>
-        public void RemoveEventListener (TimerDelegate listener)
+        public void RemoveEventListener(TimerDelegate listener)
         {
             this._onEvent -= listener;
         }
@@ -58,9 +58,9 @@ namespace PofyTools
         /// <summary>
         /// Removes all event listeners.
         /// </summary>
-        public void RemoveAllEventListeners ()
+        public void RemoveAllEventListeners()
         {
-            this._onEvent = this.IdleEventListener;
+            this._onEvent = null;
         }
         #endregion
 
@@ -79,11 +79,11 @@ namespace PofyTools
         /// Initialize this instance.
         /// </summary>
 
-        public virtual bool Initialize ()
+        public virtual bool Initialize()
         {
             if (!this.IsInitialized)
             {
-                this._onEvent = this.IdleEventListener;
+                //this._onEvent = this.IdleEventListener;
                 this.IsInitialized = true;
                 return true;
             }
@@ -97,7 +97,7 @@ namespace PofyTools
 
         private float _counterTimestamp;
 
-        public void StartCounter ()
+        public void StartCounter()
         {
             this._counterTimestamp = Time.time;
         }
@@ -116,7 +116,7 @@ namespace PofyTools
         #endregion
 
         #region Count Down
-        public void SetTimer (float duration)
+        public void SetTimer(float duration)
         {
             this._timerDuration = duration;
             this._nextTimestamp = Time.time + duration;
@@ -146,6 +146,11 @@ namespace PofyTools
             }
         }
 
+        public void SetReady()
+        {
+            this._nextTimestamp = -1;
+        }
+
         /// <summary>
         /// Gets the time left for cooldown in seconds. Time left is difference between next timestamp and Time.time maxed at 0.
         /// </summary>
@@ -154,35 +159,58 @@ namespace PofyTools
         {
             get
             {
-                return Mathf.Max (0, this._nextTimestamp - Time.time);
+                return Mathf.Max(0, this._nextTimestamp - Time.time);
             }
         }
+
+        /// <summary>
+        /// Gets current normalized time between timer started and timer should end
+        /// </summary>
+        public float NormalizedTime
+        {
+            get
+            {
+                if (IsReady) return 1f;//clamp                
+                return (Time.time - TimerStarted) / (this._nextTimestamp - TimerStarted);
+            }
+        }
+
+        /// <summary>
+        /// Get thetime the timer started timing
+        /// </summary>
+        public float TimerStarted { get { return this._nextTimestamp - this._timerDuration; } }
+
+
 
         /// <summary>
         /// Tries the execute, firing event and reseting the cooldown.
         /// </summary>
         /// <returns><c>true</c>, if execution was successful, <c>false</c> otherwise.</returns>
         /// <param name="force">If set to <c>true</c> force execution.</param>
-        public bool TryExecute (bool force = false)
+        public bool TryExecute(bool force = false, bool autoReset = true)
         {
             if (this.IsReady || force)
             {
-                FireEvent ();
+                FireEvent(autoReset);
                 return true;
             }
             return false;
         }
 
-        protected void FireEvent (bool autoResetOnEvent = false)
+        protected void FireEvent(bool autoResetOnEvent = true)
         {
-            this._onEvent (this);
-            if(autoResetOnEvent)
-                ResetTimer ();
+            this._onEvent?.Invoke(this);
+            if (autoResetOnEvent)
+                ResetTimer();
+            else
+            {
+                this._nextTimestamp = float.PositiveInfinity;
+            }
         }
 
-        public virtual void ResetTimer ()
+        public virtual void ResetTimer()
         {
-            SetTimer (this._timerDuration);
+            SetTimer(this._timerDuration);
         }
 
         #endregion

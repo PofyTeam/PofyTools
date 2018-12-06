@@ -2,20 +2,11 @@
 {
 	using UnityEngine;
 	using System.Collections;
+    using System.Collections.Generic;
 
-	public abstract class BaseDetector : MonoBehaviour, ICollidable, ITransformable
+    public abstract class BaseDetector : MonoBehaviour, ICollidable, ITransformable
 	{
-		#region ITransformable implementation
 
-		protected Transform _selfTransform;
-
-		public Transform SelfTransform {
-			get {
-				return this._selfTransform;
-			}
-		}
-
-		#endregion
 
 		#region ICollidable implementation
 
@@ -35,13 +26,14 @@
 			}
 		}
 
-		#endregion
+        public List<Collider> AllColliders { get { return null; } }
+        
+        #endregion
 
-		#region Mono
+        #region Mono
 
-		protected virtual void Awake ()
+        protected virtual void Awake ()
 		{
-			this._selfTransform = this.transform;
 			this._selfCollider = GetComponent<Collider> ();
 			this._selfRigidbody = GetComponent<Rigidbody> ();
 		}

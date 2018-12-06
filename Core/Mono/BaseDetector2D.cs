@@ -9,20 +9,6 @@
         public bool detectStay = false;
         public bool detectExit = false;
 
-        #region ITransformable implementation
-
-        protected Transform _selfTransform;
-
-        public Transform SelfTransform
-        {
-            get
-            {
-                return this._selfTransform;
-            }
-        }
-
-        #endregion
-
         #region ICollidable implementation
 
         protected Collider2D _selfCollider2D;
@@ -62,7 +48,6 @@
         {
             if (!this.IsInitialized)
             {
-                this._selfTransform = this.transform;
                 this._selfCollider2D = GetComponent<Collider2D>();
                 this._selfRigidbody2D = GetComponent<Rigidbody2D>();
                 this.IsInitialized = true;

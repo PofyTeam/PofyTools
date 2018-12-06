@@ -162,9 +162,10 @@
 
         public float Percentage(float value)
         {
-            if (!this.IsZeroLength)
-                return Mathf.Clamp01((value - this.min) / (this.max - this.min));
-            return 0;
+            //if (!this.IsZeroLength)
+            //    return Mathf.Clamp01((value - this.min) / (this.max - this.min));
+            return Mathf.InverseLerp(this.min, this.max, value);
+            //return 0;
         }
 
         public float CurrentPercentage
@@ -172,15 +173,26 @@
 
             get
             {
-                if (!this.IsZeroLength)
-                    return (this._current - this.min) / (this.max - this.min);
-                return 0;
+                //if (!this.IsZeroLength)
+                //    return (this._current - this.min) / (this.max - this.min);
+                //return 0;
+                return Mathf.InverseLerp(this.min, this.max, this._current);
             }
         }
 
         public float MappedPoint(float normalizedInput)
         {
             return (max - min) * normalizedInput + min;
+        }
+
+        public float Lerp(float t)
+        {
+            return Mathf.Lerp(this.min, this.max, t);
+        }
+
+        public float LerpUnclamped(float t)
+        {
+            return Mathf.LerpUnclamped(this.min, this.max, t);
         }
 
         public bool Contains(float point)
@@ -495,10 +507,15 @@
             get { return UnityEngine.Random.Range(this.min, this.max); }
         }
 
-        //public int IntRandom
-        //{
-        //    get { return UnityEngine.Random.Range((int)this.min, (int)this.max + 1); }
-        //}
+        public float RandomFloat
+        {
+            get { return UnityEngine.Random.Range((float)this.min, (float)this.max); }
+        }
+
+        public int InclusiveRandom
+        {
+            get { return UnityEngine.Random.Range((int)this.min, (int)this.max + 1); }
+        }
 
         public int Length
         {
