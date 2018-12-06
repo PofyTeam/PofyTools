@@ -10,7 +10,7 @@ namespace PofyTools.Sound
     {
         public const string TAG = "<color=red><b><i>SoundManager: </i></b></color>";
         private static SoundManager _instance;
-        public static SoundManager Sounds
+        public static SoundManager Instance
         {
             get
             {
@@ -80,7 +80,7 @@ namespace PofyTools.Sound
                 _instance = this;
                 Initialize();
             }
-            else if (Sounds != this)
+            else if (Instance != this)
             {
                 Destroy(this.gameObject);
             }
@@ -163,7 +163,7 @@ namespace PofyTools.Sound
         public static AudioSource Play(string clip, float volume = 1f, float pitch = 1f, bool loop = false, bool lowPriority = false)
         {
             AudioClip audioClip = null;
-            if (Sounds.TryGetValue(clip, out audioClip))
+            if (Instance.TryGetValue(clip, out audioClip))
             {
                 return PlayOnAvailableSource(audioClip, volume, pitch, loop, lowPriority);
             }
@@ -179,13 +179,13 @@ namespace PofyTools.Sound
         //plays a clip with pitch/volume variation
         public static AudioSource PlayVariation(string clip, bool loop = false, bool lowPriority = true)
         {
-            return Play(clip, Sounds.volumeVariationRange.Random, Sounds.pitchVariationRange.Random, loop, lowPriority);
+            return Play(clip, Instance.volumeVariationRange.Random, Instance.pitchVariationRange.Random, loop, lowPriority);
         }
 
         //plays a clip with pitch/volume variation
         public static AudioSource PlayVariation(AudioClip clip, bool loop = false, bool lowPriority = false)
         {
-            return Play(clip, Sounds.volumeVariationRange.Random, Sounds.pitchVariationRange.Random, loop, lowPriority);
+            return Play(clip, Instance.volumeVariationRange.Random, Instance.pitchVariationRange.Random, loop, lowPriority);
         }
 
         public static AudioSource PlayRandomFrom(params string[] clips)
@@ -205,37 +205,37 @@ namespace PofyTools.Sound
 
         public static void PlayMusic()
         {
-            Sounds._musicSource.Play();
+            Instance._musicSource.Play();
         }
 
         public static bool IsMusicPlaying()
         {
-            return Sounds._musicSource.isPlaying;
+            return Instance._musicSource.isPlaying;
         }
 
         public static void PlayCustomMusic(AudioClip newMusic)
         {
             //set up the other music source
-            var source = Sounds._musicSources[1 - Sounds._musicHead];
+            var source = Instance._musicSources[1 - Instance._musicHead];
 
             source.clip = newMusic;
             source.loop = true;
 
 
-            if (Sounds.crossMixMusic)
+            if (Instance.crossMixMusic)
             {
                 source.volume = 0;
                 source.Play();
-                Sounds.CrossMix(Sounds.crossMixDuration);
+                Instance.CrossMix(Instance.crossMixDuration);
             }
             else
             {
-                if (Sounds._musicSource.isPlaying)
-                    Sounds._musicSource.Stop();
+                if (Instance._musicSource.isPlaying)
+                    Instance._musicSource.Stop();
 
-                source.volume = Sounds.masterVolume * Sounds.musicVolume;
-                Sounds._musicHead = 1 - Sounds._musicHead;
-                Sounds._musicSource.Play();
+                source.volume = Instance.masterVolume * Instance.musicVolume;
+                Instance._musicHead = 1 - Instance._musicHead;
+                Instance._musicSource.Play();
             }
 
 
@@ -244,19 +244,19 @@ namespace PofyTools.Sound
         //Plays clip that is not in manager's dictionary
         private static AudioSource PlayOnAvailableSource(AudioClip clip, float volume = 1, float pitch = 1, bool loop = false, bool lowPriority = false)
         {
-            AudioSource source = Sounds._sources[Sounds._head];
-            int startHeadPosition = Sounds._head;
+            AudioSource source = Instance._sources[Instance._head];
+            int startHeadPosition = Instance._head;
 
             while (source.isPlaying)
             {
-                Sounds._head++;
-                if (Sounds._head == Sounds._sources.Count)
+                Instance._head++;
+                if (Instance._head == Instance._sources.Count)
                 {
-                    Sounds._head = 0;
+                    Instance._head = 0;
                 }
-                source = Sounds._sources[Sounds._head];
+                source = Instance._sources[Instance._head];
 
-                if (Sounds._head == startHeadPosition)
+                if (Instance._head == startHeadPosition)
                 {
                     if (lowPriority)
                     {
@@ -265,14 +265,14 @@ namespace PofyTools.Sound
 
                     while (source.loop)
                     {
-                        Sounds._head++;
-                        if (Sounds._head == Sounds._sources.Count)
+                        Instance._head++;
+                        if (Instance._head == Instance._sources.Count)
                         {
-                            Sounds._head = 0;
+                            Instance._head = 0;
                         }
-                        source = Sounds._sources[Sounds._head];
-                        Debug.Log(Sounds._head);
-                        if (Sounds._head == startHeadPosition)
+                        source = Instance._sources[Instance._head];
+                        Debug.Log(Instance._head);
+                        if (Instance._head == startHeadPosition)
                         {
                             break;
                         }
@@ -282,13 +282,13 @@ namespace PofyTools.Sound
             }
 
             source.clip = clip;
-            source.volume = volume * Sounds.masterVolume;
+            source.volume = volume * Instance.masterVolume;
             source.pitch = pitch;
             source.loop = loop;
 
             source.Play();
 
-            if (Sounds.duckMusicOnSound)
+            if (Instance.duckMusicOnSound)
                 DuckMusicOnSound(clip);
             return source;
         }
@@ -311,16 +311,16 @@ namespace PofyTools.Sound
 
         public static void MuteSound(bool mute = true)
         {
-            for (int i = 0, Controller_sourcesCount = Sounds._sources.Count; i < Controller_sourcesCount; i++)
+            for (int i = 0, Controller_sourcesCount = Instance._sources.Count; i < Controller_sourcesCount; i++)
             {
-                var source = Sounds._sources[i];
+                var source = Instance._sources[i];
                 source.mute = mute;
             }
         }
 
         public static void MuteMusic(bool mute = true)
         {
-            Sounds._musicSource.mute = mute;
+            Instance._musicSource.mute = mute;
         }
 
         public static void PauseAll()
@@ -332,14 +332,14 @@ namespace PofyTools.Sound
 
         public static void PauseMusic()
         {
-            Sounds._musicSource.Pause();
+            Instance._musicSource.Pause();
         }
 
         public static void PauseSound()
         {
-            for (int i = 0, Controller_sourcesCount = Sounds._sources.Count; i < Controller_sourcesCount; i++)
+            for (int i = 0, Controller_sourcesCount = Instance._sources.Count; i < Controller_sourcesCount; i++)
             {
-                var source = Sounds._sources[i];
+                var source = Instance._sources[i];
                 source.Pause();
             }
         }
@@ -352,25 +352,25 @@ namespace PofyTools.Sound
 
         public static void ResumeMusic()
         {
-            Sounds._musicSource.UnPause();
+            Instance._musicSource.UnPause();
         }
 
         public static void ResumeSound()
         {
-            for (int i = 0, Controller_sourcesCount = Sounds._sources.Count; i < Controller_sourcesCount; i++)
+            for (int i = 0, Controller_sourcesCount = Instance._sources.Count; i < Controller_sourcesCount; i++)
             {
-                var source = Sounds._sources[i];
+                var source = Instance._sources[i];
                 source.UnPause();
             }
         }
 
         public static void StopAll()
         {
-            Sounds._musicSource.Stop();
+            Instance._musicSource.Stop();
 
-            for (int i = 0, Controller_sourcesCount = Sounds._sources.Count; i < Controller_sourcesCount; i++)
+            for (int i = 0, Controller_sourcesCount = Instance._sources.Count; i < Controller_sourcesCount; i++)
             {
-                var source = Sounds._sources[i];
+                var source = Instance._sources[i];
                 source.Stop();
                 source.loop = false;
             }
@@ -393,7 +393,7 @@ namespace PofyTools.Sound
 
         public static bool IsMusicDucked
         {
-            get { return !(Sounds._musicSource.volume > Sounds._musicDuckingVolume); }
+            get { return !(Instance._musicSource.volume > Instance._musicDuckingVolume); }
         }
 
         public static void FadeIn(float duration)
@@ -414,27 +414,27 @@ namespace PofyTools.Sound
 
         public static void DuckMusic(float duckToVolume = 0f, float duckingDuration = 0.5f, bool onSound = false)
         {
-            Sounds.StopCoroutine(Sounds.DuckMusicState());
+            Instance.StopCoroutine(Instance.DuckMusicState());
 
-            Sounds._musicDuckingVolume = duckToVolume * Sounds.musicVolume * Sounds.masterVolume;
-            Sounds._musicDuckingDuration = duckingDuration;
-            Sounds._musicDuckingTimer = duckingDuration;
+            Instance._musicDuckingVolume = duckToVolume * Instance.musicVolume * Instance.masterVolume;
+            Instance._musicDuckingDuration = duckingDuration;
+            Instance._musicDuckingTimer = duckingDuration;
 
             if (!onSound)
-                Sounds.StartCoroutine(Sounds.DuckMusicState());
+                Instance.StartCoroutine(Instance.DuckMusicState());
             else
-                Sounds.StartCoroutine(Sounds.DuckMusicOnSound());
+                Instance.StartCoroutine(Instance.DuckMusicOnSound());
         }
 
         public static void DuckSound(float duckToVolume = 0f, float duckingDuration = 0.5f)
         {
-            Sounds.StopCoroutine(Sounds.DuckSoundState());
+            Instance.StopCoroutine(Instance.DuckSoundState());
 
-            Sounds._soundDuckingVolume = duckToVolume * Sounds.masterVolume;
-            Sounds._soundDuckingDuration = duckingDuration;
-            Sounds._soundDuckingTimer = duckingDuration;
+            Instance._soundDuckingVolume = duckToVolume * Instance.masterVolume;
+            Instance._soundDuckingDuration = duckingDuration;
+            Instance._soundDuckingTimer = duckingDuration;
 
-            Sounds.StartCoroutine(Sounds.DuckSoundState());
+            Instance.StartCoroutine(Instance.DuckSoundState());
         }
 
         IEnumerator DuckMusicOnSound()
@@ -464,12 +464,12 @@ namespace PofyTools.Sound
 
         private static void DuckMusicOnSound(AudioClip sound)
         {
-            Sounds.StopCoroutine(Sounds.DuckMusicState());
+            Instance.StopCoroutine(Instance.DuckMusicState());
             //Debug.Log(sound.length);
 
-            Sounds._duckOnSoundDuration = sound.length;
+            Instance._duckOnSoundDuration = sound.length;
 
-            DuckMusic(Sounds.duckOnSoundVolume, Sounds.duckOnSoundTransitionDuration, true);
+            DuckMusic(Instance.duckOnSoundVolume, Instance.duckOnSoundTransitionDuration, true);
         }
 
         IEnumerator DuckSoundState()
