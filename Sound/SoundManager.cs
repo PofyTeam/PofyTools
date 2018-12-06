@@ -6,11 +6,27 @@ namespace PofyTools.Sound
     using System.Collections.Generic;
 
     //    [RequireComponent(typeof(AudioListener))]
-    public class SoundManager : MonoBehaviour, IDictionary<string,AudioClip>
+    public class SoundManager : MonoBehaviour, IDictionary<string, AudioClip>
     {
         public const string TAG = "<color=red><b><i>SoundManager: </i></b></color>";
+        private static SoundManager _instance;
+        public static SoundManager Sounds
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = FindObjectOfType<SoundManager>();
+                    if (_instance == null)
+                        Debug.LogError(TAG + "No instance in the scene!");
+                    else
+                        _instance.Initialize();
+                }
 
-        public static SoundManager Sounds;
+                return _instance;
+            }
+            private set { _instance = value; }
+        }
 
         [Header("Sounds")]
         public AudioClip[] clips;
@@ -19,7 +35,7 @@ namespace PofyTools.Sound
         private int _head = 0;
         public Range volumeVariationRange = new Range(0.9f, 1), pitchVariationRange = new Range(0.95f, 1.05f);
 
-        public AudioListener audioListener{ get; private set; }
+        public AudioListener audioListener { get; private set; }
 
         private List<AudioSource> _sources;
 
@@ -43,26 +59,26 @@ namespace PofyTools.Sound
         private AudioSource[] _musicSources;
         private int _musicHead = -1;
 
-        [Range(0, 1)]public float musicVolume = 1;
+        [Range(0, 1)] public float musicVolume = 1;
 
         [Header("Master")]
-        [Range(0, 1)]public float masterVolume = 1;
+        [Range(0, 1)]
+        public float masterVolume = 1;
 
         [Header("Resources")]
         public string resourcePath = "Sound";
         public bool loadFromResources = true;
-        private Dictionary<string,AudioClip> _dictionary;
+        private Dictionary<string, AudioClip> _dictionary;
 
         [Header("AudioListener")]
         public bool attachAudioListener;
 
         void Awake()
         {
-            if (Sounds == null)
+            if (_instance == null)
             {
-                Sounds = this;
+                _instance = this;
                 Initialize();
-                DontDestroyOnLoad(this.gameObject);
             }
             else if (Sounds != this)
             {
@@ -88,6 +104,8 @@ namespace PofyTools.Sound
             if (this.loadFromResources)
                 LoadResourceSounds();
             LoadPrefabSounds();
+
+            DontDestroyOnLoad(this.gameObject);
         }
 
         void LoadResourceSounds()
@@ -104,7 +122,7 @@ namespace PofyTools.Sound
 
         void LoadPrefabSounds()
         {
-            
+
             if (this.music != null)
             {
                 this._musicSource.clip = this.music;
@@ -115,7 +133,7 @@ namespace PofyTools.Sound
 
             if (this._dictionary == null)
                 this._dictionary = new Dictionary<string, AudioClip>(this.clips.Length);
-			
+
             this._sources = new List<AudioSource>(voices);
             for (int i = 0; i < this.voices; ++i)
             {
@@ -157,9 +175,9 @@ namespace PofyTools.Sound
         {
             return PlayOnAvailableSource(clip, volume, pitch, loop, lowPriority);
         }
-			
+
         //plays a clip with pitch/volume variation
-        public static AudioSource PlayVariation(string clip, bool loop = false, bool lowPriority = false)
+        public static AudioSource PlayVariation(string clip, bool loop = false, bool lowPriority = true)
         {
             return Play(clip, Sounds.volumeVariationRange.Random, Sounds.pitchVariationRange.Random, loop, lowPriority);
         }
@@ -170,7 +188,7 @@ namespace PofyTools.Sound
             return Play(clip, Sounds.volumeVariationRange.Random, Sounds.pitchVariationRange.Random, loop, lowPriority);
         }
 
-        public static AudioSource PlayRandomFrom(params string[]clips)
+        public static AudioSource PlayRandomFrom(params string[] clips)
         {
             return PlayVariation(clips[Random.Range(0, clips.Length)]);
         }
@@ -180,7 +198,7 @@ namespace PofyTools.Sound
             return PlayVariation(list[Random.Range(0, list.Count)]);
         }
 
-        public static AudioSource PlayRandomCustom(params AudioClip[]clips)
+        public static AudioSource PlayRandomCustom(params AudioClip[] clips)
         {
             return PlayVariation(clips[Random.Range(0, clips.Length)]);
         }
@@ -307,7 +325,7 @@ namespace PofyTools.Sound
 
         public static void PauseAll()
         {
-			
+
             PauseMusic();
             PauseSound();
         }
@@ -349,7 +367,7 @@ namespace PofyTools.Sound
         public static void StopAll()
         {
             Sounds._musicSource.Stop();
-			
+
             for (int i = 0, Controller_sourcesCount = Sounds._sources.Count; i < Controller_sourcesCount; i++)
             {
                 var source = Sounds._sources[i];
@@ -438,7 +456,7 @@ namespace PofyTools.Sound
                 this._musicSource.volume = Mathf.Lerp(this._musicSource.volume, this._musicDuckingVolume, normalizedTime);
                 yield return null;
             }
-//            SoundManager.IsMusicDucked = this._musicSource.volume
+            //            SoundManager.IsMusicDucked = this._musicSource.volume
             //Restore on sound end
         }
 
@@ -534,7 +552,7 @@ namespace PofyTools.Sound
             return this._dictionary.TryGetValue(key, out value);
         }
 
-        public AudioClip this [string index]
+        public AudioClip this[string index]
         {
             get
             {
