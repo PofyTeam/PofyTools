@@ -1,4 +1,4 @@
-﻿namespace PofyTools.UI
+﻿namespace PofyTools
 {
     using UnityEngine;
     using UnityEngine.UI;

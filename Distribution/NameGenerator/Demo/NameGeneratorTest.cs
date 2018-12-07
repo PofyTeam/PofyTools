@@ -1,12 +1,8 @@
-﻿using System.Collections;
+﻿using Extensions;
+using PofyTools;
 using System.Collections.Generic;
 using UnityEngine;
-using PofyTools.NameGenerator;
 using UnityEngine.UI;
-using PofyTools;
-using PofyTools.Distribution;
-using Extensions;
-using Guvernal.IdleRPG;
 
 public class NameGeneratorTest : MonoBehaviour
 {
@@ -279,15 +275,15 @@ public class NameGeneratorTest : MonoBehaviour
     [ContextMenu("Save")]
     public void Save()
     {
-        GameDefinitions.Semantics = this.data;
-        GameDefinitions.BuildAll();
+        //GameDefinitions.Semantics = this.data;
+        //GameDefinitions.BuildAll();
     }
 
     [ContextMenu("Load")]
     public void Load()
     {
-        GameDefinitions.Init();
-        this.data = GameDefinitions.Semantics;
+        //GameDefinitions.Init();
+        //this.data = GameDefinitions.Semantics;
     }
     #endregion
 }

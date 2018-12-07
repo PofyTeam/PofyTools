@@ -1,4 +1,4 @@
-﻿namespace PofyTools.UI
+﻿namespace PofyTools
 {
     using System.Collections;
     using System.Collections.Generic;

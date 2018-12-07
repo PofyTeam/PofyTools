@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using PofyTools.LevelLoader;
+﻿using UnityEngine;
 
 namespace PofyTools
 {
@@ -14,7 +11,7 @@ namespace PofyTools
 
         protected override void OnClick()
         {
-            LevelLoader.LevelLoader.LoadCustomScene(this._sceneToLoad);
+            LevelLoader.LoadCustomScene(this._sceneToLoad);
         }
 
         #endregion

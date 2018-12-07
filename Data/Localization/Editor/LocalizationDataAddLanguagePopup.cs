@@ -1,4 +1,4 @@
-﻿namespace PofyTools.Local
+﻿namespace PofyTools
 {
     #pragma  warning disable 219
     using System.Collections;

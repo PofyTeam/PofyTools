@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Extensions;
 
-namespace PofyTools.Data
+namespace PofyTools
 {
 
     [System.Serializable]

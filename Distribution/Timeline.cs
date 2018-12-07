@@ -1,4 +1,4 @@
-﻿namespace PofyTools.Distribution
+﻿namespace PofyTools
 {
     using System.Collections;
     using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿namespace PofyTools.Data
+﻿namespace PofyTools
 {
     using Extensions;
     using System.Collections;

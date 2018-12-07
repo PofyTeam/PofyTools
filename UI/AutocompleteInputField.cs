@@ -1,8 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using PofyTools.Data;
+
+namespace PofyTools
+{
 
 public class AutocompleteInputField : MonoBehaviour
 {
@@ -78,3 +79,4 @@ public class AutocompleteInputField : MonoBehaviour
 //{
 //    T GetContent ();
 //}
+}

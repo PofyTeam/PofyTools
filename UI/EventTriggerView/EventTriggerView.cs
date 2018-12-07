@@ -1,4 +1,4 @@
-﻿namespace PofyTools.UI
+﻿namespace PofyTools
 {
     using UnityEngine;
     using System.Collections;
@@ -76,6 +76,11 @@
                 return true;
             }
             return false;
+        }
+
+        public override void ConstructAvailableStates()
+        {
+            //throw new System.NotImplementedException();
         }
 
         #endregion

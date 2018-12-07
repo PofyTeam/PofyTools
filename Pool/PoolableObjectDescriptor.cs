@@ -1,4 +1,4 @@
-﻿namespace PofyTools.Pool
+﻿namespace PofyTools
 {
 	using UnityEngine;
 	using System.Collections;

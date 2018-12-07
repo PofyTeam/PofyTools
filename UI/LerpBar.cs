@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace PofyTools.UI
+namespace PofyTools
 {
     public class LerpBar : Panel
     {

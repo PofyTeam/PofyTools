@@ -1,10 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using PofyTools.UI;
-using PofyTools;
-using UnityEngine.UI;
+﻿using PofyTools;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Dialog : Panel
 {

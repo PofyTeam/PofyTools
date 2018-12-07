@@ -1,18 +1,13 @@
-﻿
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using PofyTools;
-using PofyTools.Pool;
-using UnityEngine.UI;
+﻿using System.Collections.Generic;
 using TMPro;
+using UnityEngine;
 
-namespace PofyTools.UI
+namespace PofyTools
 {
 
-    public class ScreenInfo : StateableActor, IPoolable<ScreenInfo>
+    public class ScreenInfo : StateableActor, IPoolableComponent<ScreenInfo>
     {
-        private Pool<ScreenInfo> _pool;
+
         public CanvasGroup canvasGroup;
         public TextMeshProUGUI message;
         public float size = 1;
@@ -33,18 +28,12 @@ namespace PofyTools.UI
         public Vector3 offset;
         public float speed = 1;
         public float duration = 1;
-        private Transform _target;
 
-        public Transform target
+        private Transform _target;
+        public Transform Target
         {
             get { return this._target; }
             set { this._target = value; }
-        }
-
-        protected override void Awake()
-        {
-            base.Awake();
-            this.removeAllStatesOnStart = false;
         }
 
         #region IPoolable implementation
@@ -61,12 +50,26 @@ namespace PofyTools.UI
             AddState(this.flowState);
         }
 
-        public Pool<ScreenInfo> Pool
+        private ComponentPool<ScreenInfo> _pool;
+        //public ComponentPool<ScreenInfo> Pool
+        //{
+        //    get
+        //    {
+        //        return this._pool;
+        //    }
+        //    set
+        //    {
+        //        this._pool = value;
+        //    }
+        //}
+
+        ComponentPool<ScreenInfo> IPoolableComponent<ScreenInfo>.Pool
         {
             get
             {
                 return this._pool;
             }
+
             set
             {
                 this._pool = value;
@@ -96,11 +99,6 @@ namespace PofyTools.UI
             this.flowState = new InfoFlowState(this);
         }
 
-        public override void InitializeStateStack()
-        {
-            this._stateStack = new List<IState>(1);
-        }
-
         #endregion
     }
 
@@ -128,14 +126,14 @@ namespace PofyTools.UI
 
         public override void EnterState()
         {
-            if (this[0].target != null)
-                this[0].SelfTransform.position = this[0].target.transform.position + this[0].offset;
+            if (this[0].Target != null)
+                this[0].transform.position = this[0].Target.transform.position + this[0].offset;
             else
-                this[0].SelfTransform.position = this[0].offset;
+                this[0].transform.position = this[0].offset;
 
             this._timer = this[0].duration;
-            this[0].SelfTransform.localRotation = Quaternion.Euler(Vector3.forward * Random.Range(-30, 30));
-            this[0].SelfTransform.Translate(this[0].speed * Vector3.up, Space.Self);
+            this[0].transform.localRotation = Quaternion.Euler(Vector3.forward * Random.Range(-30, 30));
+            this[0].transform.Translate(this[0].speed * Vector3.up, Space.Self);
             //this.countMultiplier = this[0].Pool.Count * 0.33f;
 
         }
@@ -147,8 +145,8 @@ namespace PofyTools.UI
                 this._timer = 0;
             float normalizedTime = this[0].alphaCurve.Evaluate(1 - this._timer / this[0].duration);
             this[0].canvasGroup.alpha = normalizedTime;
-            this[0].SelfTransform.localScale = normalizedTime * Vector3.one * this[0].size;// * this.countMultiplier;
-            this[0].SelfTransform.Translate(this[0].speed * Time.smoothDeltaTime * Vector3.up, Space.Self);
+            this[0].transform.localScale = normalizedTime * Vector3.one * this[0].size;// * this.countMultiplier;
+            this[0].transform.Translate(this[0].speed * Time.smoothDeltaTime * Vector3.up, Space.Self);
             if (this._timer <= 0)
                 return true;
             return false;

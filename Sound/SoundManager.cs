@@ -1,5 +1,5 @@
 ﻿
-namespace PofyTools.Sound
+namespace PofyTools
 {
     using UnityEngine;
     using System.Collections;

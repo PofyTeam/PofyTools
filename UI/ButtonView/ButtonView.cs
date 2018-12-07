@@ -63,5 +63,10 @@ namespace PofyTools
         }
 
         #endregion
+
+        public override void ConstructAvailableStates()
+        {
+            //
+        }
     }
 }

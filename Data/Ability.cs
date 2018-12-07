@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PofyTools.Data
+namespace PofyTools
 {
     [System.Serializable]
     public class AbilityDefinition : Definition

@@ -3,7 +3,7 @@
 /// </summary>
 using System.Collections;
 
-namespace PofyTools.LevelLoader
+namespace PofyTools
 {
     using UnityEngine;
     using UnityEngine.UI;

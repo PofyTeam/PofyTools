@@ -1,4 +1,4 @@
-﻿namespace PofyTools.Distribution
+﻿namespace PofyTools
 {
     using UnityEngine;
     using System.Collections;

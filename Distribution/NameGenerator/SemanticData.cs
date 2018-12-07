@@ -1,15 +1,9 @@
-﻿namespace PofyTools.NameGenerator
-{
-    using System.Collections;
+﻿    using Extensions;
     using System.Collections.Generic;
     using UnityEngine;
-    using System.IO;
-    using System.Text;
-    using System.Globalization;
-    using PofyTools.Distribution;
-    using Extensions;
-    using PofyTools.Data;
 
+namespace PofyTools
+{
     [System.Serializable]
     public class SemanticData : IInitializable
     {
