@@ -281,6 +281,11 @@
             get { return new Range(0f, 100f); }
         }
 
+        public static bool InRange(float value, float min, float max)
+        {
+            return !(value < min || value > max);
+        }
+
         #endregion
 
         #region OVERRIDES

@@ -141,7 +141,7 @@
         {
             get;
         }
-        
+
         bool Initialize();
     }
 

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace PofyTools
 {
@@ -60,7 +58,7 @@ namespace PofyTools
         /// </summary>
         public void RemoveAllEventListeners()
         {
-            this._onEvent = null;
+            this._onEvent = IdleEventListener;
         }
         #endregion
 
@@ -83,7 +81,7 @@ namespace PofyTools
         {
             if (!this.IsInitialized)
             {
-                //this._onEvent = this.IdleEventListener;
+                this._onEvent = IdleEventListener;
                 this.IsInitialized = true;
                 return true;
             }
@@ -142,7 +140,7 @@ namespace PofyTools
         {
             get
             {
-                return (Time.time > this._nextTimestamp);
+                return (Time.time >= this._nextTimestamp);
             }
         }
 
@@ -170,8 +168,10 @@ namespace PofyTools
         {
             get
             {
-                if (IsReady) return 1f;//clamp                
-                return (Time.time - TimerStarted) / (this._nextTimestamp - TimerStarted);
+                if (this.IsReady)
+                    return 1f;//clamp                
+                return Mathf.InverseLerp(this.TimerStarted, this._nextTimestamp, Time.time);
+                //return (Time.time - TimerStarted) / (this._nextTimestamp - TimerStarted);
             }
         }
 

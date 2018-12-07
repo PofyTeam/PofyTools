@@ -1,15 +1,22 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using System;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace PofyTools
 {
 
     public abstract class StateableActor : MonoBehaviour, IStateable, ISubscribable, IInitializable, ITransformable
     {
+#if UNITY_EDITOR
+
+        private List<string> _stateList = new List<string>();
+#endif
+
         #region Variables
-        private List<IState> _stateStack;
+
+        //public bool removeAllStatesOnStart = true;
+
+        protected List<IState> _stateStack;
+
         #endregion
 
         #region IInitializable
@@ -94,7 +101,10 @@ namespace PofyTools
             if (state == null)
             {
                 if (this._stateStack.Count == 0)
+                {
                     this.enabled = false;
+                    Debug.LogError("<size=24> " + this.name + ": Disabled for adding a null state object!</size>");
+                }
                 return;
             }
 
@@ -125,6 +135,7 @@ namespace PofyTools
 
         public void RemoveAllStates(bool endPermanent = false, int priority = 0)
         {
+
             if (this._stateStack != null)
             {
                 int count = this._stateStack.Count;
@@ -180,12 +191,22 @@ namespace PofyTools
             Subscribe();
 
             //if (this.removeAllStatesOnStart)
-            //  PurgeStateStack();
+            //    PurgeStateStack();
         }
 
         // Update is called once per frame
         protected virtual void Update()
         {
+
+#if UNITY_EDITOR
+
+            this._stateList.Clear();
+            foreach (var logstate in this._stateStack)
+            {
+                this._stateList.Add(logstate.ToString());
+            }
+#endif
+
             IState state = null;
 
             for (int i = this._stateStack.Count - 1;i >= 0 && i < this._stateStack.Count;--i)
@@ -293,6 +314,12 @@ namespace PofyTools
             this.IsActive = false;
         }
 
+        public bool IgnoreStacking
+        {
+            get;
+            protected set;
+        }
+
         public bool IsPermanent
         {
             get;
@@ -325,13 +352,14 @@ namespace PofyTools
             this.IsInitialized = true;
             if (this[0] == null)
             {
-                Debug.LogError(this.ToString() + " has no controlled object");
+                Debug.LogError(ToString() + " has no controlled object");
             }
         }
 
         public virtual void EnterState()
         {
             this.IsActive = true;
+            //this.onEnter (this);
         }
 
         public virtual bool UpdateState()
@@ -354,7 +382,9 @@ namespace PofyTools
 
         public virtual void ExitState()
         {
+
             this.IsActive = false;
+            //this.onExit (this);
         }
 
         #endregion

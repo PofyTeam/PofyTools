@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Globalization;
-using System.Text.RegularExpressions;
 //using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Events;
@@ -183,7 +181,7 @@ namespace Extensions
     {
         public static LayerMask AddLayerToMask(this LayerMask mask, params int[] layer)
         {
-            for (int i = 0; i < layer.Length; i++)
+            for (int i = 0;i < layer.Length;i++)
             {
                 mask = 1 << layer[i] | mask;
             }
@@ -286,7 +284,7 @@ namespace Extensions
         public static bool Is<T>(this System.Enum type, params T[] value)
         {
             var thisType = (int)(object)type;
-            for (int i = 0; i < value.Length; i++)
+            for (int i = 0;i < value.Length;i++)
             {
                 if (thisType == (int)(object)value[i])
                     return true;
@@ -363,7 +361,7 @@ namespace Extensions
         public static void ClearChildren(this Transform transform)
         {
             Transform child = null;
-            for (int i = transform.childCount - 1; i >= 0; --i)
+            for (int i = transform.childCount - 1;i >= 0;--i)
             {
                 child = transform.GetChild(i);
 #if UNITY_EDITOR
@@ -375,10 +373,13 @@ namespace Extensions
             }
         }
 
-        public static float ForwardToPointAngle(this Transform transform, Vector3 point, Space space = Space.World)
+        public static float ForwardToPointAngle(this Transform transform, Vector3 point, Space space = Space.World, bool signed = true)
         {
             Vector3 axis = (space == Space.World) ? Vector3.up : transform.up;
-            return Vector3.SignedAngle(point - transform.position, transform.forward, axis);
+            if (signed)
+                return Vector3.SignedAngle(point - transform.position, transform.forward, axis);
+
+            return Vector3.Angle(point - transform.position, transform.forward);
         }
 
         public static bool IsPointRight(this Transform transform, Vector3 point)
@@ -429,7 +430,7 @@ namespace Extensions
         {
             var numberOfSteps = 0;
             var stepSum = 0f;
-            for (float i = 0; i <= 1; i += step)
+            for (float i = 0;i <= 1;i += step)
             {
                 stepSum += curve.Evaluate(i);
                 numberOfSteps++;
@@ -488,7 +489,6 @@ namespace Extensions
             transform.localPosition = tr;
         }
     }
-
     public static class Vector3Extenstion
     {
         public static float Average(this Vector3 vector)
