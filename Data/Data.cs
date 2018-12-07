@@ -1,24 +1,64 @@
 ﻿namespace PofyTools
 {
     using Extensions;
-    using System.Collections;
     using System.Collections.Generic;
     using System.IO;
     using System.Text;
     using UnityEngine;
 
-    /// <summary>
-    /// Collection of keyable values obtainable via key or index.
-    /// </summary>
-    /// <typeparam name="TKey"> Key Type.</typeparam>
-    /// <typeparam name="TValue">Value Type.</typeparam>
     [System.Serializable]
-    public abstract class DataSet<TKey, TValue> : IInitializable, IList<TValue>, IDictionary<TKey, TValue>, IContentProvider<List<TValue>> where TValue : Data<TKey>
+    public abstract class CollectionPair<TKey, TValue> : IContentProvider<List<TValue>>, IInitializable
     {
         [SerializeField]
         protected List<TValue> _content = new List<TValue>();
+        public Dictionary<TKey, TValue> content = new Dictionary<TKey, TValue>();
 
-        protected Dictionary<TKey, TValue> _contentDictionary = new Dictionary<TKey, TValue>();
+        #region Constructors
+
+        public CollectionPair()
+        {
+            this._content = new List<TValue>();
+            this.content = new Dictionary<TKey, TValue>();
+        }
+
+        public CollectionPair(int capacity)
+        {
+            this._content = new List<TValue>(capacity: capacity);
+            this.content = new Dictionary<TKey, TValue>(capacity: capacity);
+        }
+
+        public CollectionPair(IList<TValue> values)
+        {
+            this._content = new List<TValue>(collection: values);
+            this.content = new Dictionary<TKey, TValue>(capacity: values.Count);
+        }
+
+        public CollectionPair(params TValue[] values)
+        {
+            this._content = new List<TValue>(collection: values);
+            this.content = new Dictionary<TKey, TValue>(capacity: values.Length);
+        }
+
+        public CollectionPair(IDictionary<TKey, TValue> values)
+        {
+            this._content = new List<TValue>(collection: values.Values);
+            this.content = new Dictionary<TKey, TValue>(values);
+        }
+
+        public CollectionPair(params KeyValuePair<TKey, TValue>[] values) : this(values.Length)
+        {
+            foreach (var pair in values)
+            {
+                this._content.Add(pair.Value);
+                this.content.Add(pair.Key, pair.Value);
+            }
+        }
+
+        #endregion
+
+        #region IInitializable
+
+        public virtual bool IsInitialized { get; protected set; }
 
         public virtual bool Initialize()
         {
@@ -26,98 +66,25 @@
             {
                 if (this._content.Count != 0)
                 {
-                    BuildDictionaries();
-                    this.IsInitialized = true;
-                    return true;
+                    if (BuildDictionary())
+                    {
+                        this.IsInitialized = true;
+                        return true;
+                    }
+                    Debug.LogWarning("Failed to buid a dictionary. Aborting Collection Pair Initialization... " + typeof(TValue).ToString());
+                    return false;
                 }
 
-                Debug.LogWarning("Content not available. Aborting Data Set Initialization... " + typeof(TValue).ToString());
+                Debug.LogWarning("Content not available. Aborting Collection Pair Initialization... " + typeof(TValue).ToString());
                 return false;
             }
             return false;
         }
+        #endregion
 
-        protected virtual void BuildDictionaries()
-        {
-            this._contentDictionary.Clear();
+        protected abstract bool BuildDictionary();
 
-            //Add content from list to dictionary
-            foreach (var element in this._content)
-            {
-                if (this._contentDictionary.ContainsKey(element.id))
-                    Debug.LogWarning("Id " + element.id + " present in the set. Overwriting...");
-                this._contentDictionary[element.id] = element;
-            }
-        }
-
-        public virtual bool IsInitialized { get; protected set; }
-
-        /// <summary>
-        /// Gets content's element via key.
-        /// </summary>
-        /// <param name="key">Element's key.</param>
-        /// <returns>Content's element.</returns>
-        public TValue GetValue(TKey key)
-        {
-            TValue result = default(TValue);
-
-            if (!this.IsInitialized)
-            {
-                Debug.LogWarning("Data Set Not Initialized! " + typeof(TValue).ToString());
-                return result;
-            }
-
-            if (!this._contentDictionary.TryGetValue(key, out result))
-                Debug.LogWarning("Value Not Found For Key: " + key);
-
-            return result;
-        }
-
-        public bool ContainsValue(TKey key)
-        {
-            return this._content.Exists(x => x.id.Equals(key));
-        }
-
-        /// <summary>
-        /// Gets random element from content.
-        /// </summary>
-        /// <returns>Random element</returns>
-        public TValue GetRandom()
-        {
-            return this._content.TryGetRandom();
-        }
-
-        /// <summary>
-        /// Gets random element different from the last random pick.
-        /// </summary>
-        /// <param name="lastRandomIndex">Index of previously randomly obtained element.</param>
-        /// <returns>Random element different from last random.</returns>
-        public TValue GetNextRandom(ref int lastRandomIndex)
-        {
-            int newIndex = lastRandomIndex;
-            int length = this._content.Count;
-
-            if (length > 1)
-            {
-                do
-                {
-                    newIndex = Random.Range(0, length);
-                }
-                while (lastRandomIndex == newIndex);
-            }
-
-            lastRandomIndex = newIndex;
-
-            return this._content[newIndex];
-        }
-
-        /// <summary>
-        /// Content's element count.
-        /// </summary>
-        public int Count
-        {
-            get { return this._content.Count; }
-        }
+        #region IContentProvider
 
         public virtual void SetContent(List<TValue> content)
         {
@@ -129,152 +96,213 @@
             return this._content;
         }
 
-        public List<TKey> GetKeys()
+        public virtual void AddContent(TKey key, TValue value)
         {
-            return new List<TKey>(this._contentDictionary.Keys);
-        }
-
-        public int IndexOf(TValue item)
-        {
-            return this._content.IndexOf(item);
-        }
-
-        public void Insert(int index, TValue item)
-        {
-            this._content.Insert(index, item);
-        }
-
-        public void RemoveAt(int index)
-        {
-            this._content.RemoveAt(index);
-        }
-
-        public TValue this[int index]
-        {
-            get
+            if (!this._content.Contains(value))
             {
-                return this._content[index];
+                this._content.Add(value);
+
+                if (!this.content.ContainsKey(key))
+                    this.content[key] = value;
+                else
+                {
+                    Debug.LogWarning(ToString() + ": Duplicate key! Aborting... " + key.ToString());
+                }
             }
-
-            set
+            else
             {
-                this._content[index] = value;
+                Debug.LogWarning(ToString() + ": Duplicate value! Aborting... " + value.ToString());
             }
         }
 
-        public void Add(TValue item)
+        public virtual bool RemoveContent(TKey key)
         {
-            this._content.Add(item);
+            TValue outValue = default(TValue);
+
+            if (this.content.TryGetValue(key, out outValue))
+            {
+                this.content.Remove(key);
+                this._content.Remove(outValue);
+
+                return true;
+            }
+            return false;
         }
 
-        public void Clear()
+        public virtual bool RemoveContent(TValue value)
+        {
+            if (this._content.Remove(value))
+            {
+                TKey key = default(TKey);
+                bool keyFound = false;
+
+                foreach (var pair in this.content)
+                {
+                    if (pair.Value.Equals(value))
+                    {
+                        key = pair.Key;
+                        keyFound = true;
+                        break;
+                    }
+                }
+
+                if (keyFound)
+                {
+                    this.content.Remove(key);
+                }
+                return true;
+            }
+            return false;
+        }
+
+        public void ClearContent()
         {
             this._content.Clear();
+            this.content.Clear();
+
+            this.IsInitialized = false;
         }
+        #endregion
 
-        public bool Contains(TValue item)
+        #region API
+        /// <summary>
+        /// Gets content's element via key.
+        /// </summary>
+        /// <param name="key">Element's key.</param>
+        /// <param name="runtime">Requires initialized set.</param>
+        /// <returns>Content's element.</returns>
+        public TValue GetValue(TKey key, bool runtime = true)
         {
-            return this._content.Contains(item);
-        }
+            TValue result = default(TValue);
 
-        public void CopyTo(TValue[] array, int arrayIndex)
-        {
-            this._content.CopyTo(array, arrayIndex);
-        }
-
-        public bool Remove(TValue item)
-        {
-            return this._content.Remove(item);
-        }
-
-        public bool IsReadOnly { get { return ((IList<TValue>)this._content).IsReadOnly; } }
-
-        public IEnumerator<TValue> GetEnumerator()
-        {
-            return this._content.GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return this._content.GetEnumerator();
-        }
-
-        public void Add(TKey key, TValue value)
-        {
-            if (value.id.Equals(key))
+            if (!this.IsInitialized && runtime)
             {
-                this._contentDictionary.Add(key, value);
+                Debug.LogWarning("Data Set Not Initialized! " + typeof(TValue).ToString());
+                return result;
             }
+
+            if (!this.content.TryGetValue(key, out result))
+                Debug.LogWarning("Value Not Found For Key: " + key);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Gets random element from content.
+        /// </summary>
+        /// <returns>Random element</returns>
+        public TValue GetRandom()
+        {
+            return this._content.GetRandom();
+        }
+
+        /// <summary>
+        /// Gets random element from content or type's default value.
+        /// </summary>
+        /// <returns>Random element</returns>
+        public TValue TryGetRandom()
+        {
+            return this._content.TryGetRandom();
+        }
+
+        /// <summary>
+        /// Gets random element different from the last random pick.
+        /// </summary>
+        /// <param name="lastRandomIndex">Index of previously randomly obtained element.</param>
+        /// <returns>Random element different from last random.</returns>
+        public TValue GetNextRandom(ref int lastIndex)
+        {
+            return this._content.GetNextRandom(ref lastIndex);
+        }
+
+        #endregion
+
+        #region IList
+        /// <summary>
+        /// Content's element count.
+        /// </summary>
+        public int Count
+        {
+            get { return this._content.Count; }
+        }
+
+
+        #endregion
+
+        #region IDicitionary
+
+        public List<TKey> GetKeys()
+        {
+            return new List<TKey>(this.content.Keys);
+        }
+
+        public void GetKeys(List<TKey> list)
+        {
+            list.Clear();
+            list.AddRange(this.content.Keys);
         }
 
         public bool ContainsKey(TKey key)
         {
-            return this._contentDictionary.ContainsKey(key);
+            return this.content.ContainsKey(key);
         }
 
-        public bool Remove(TKey key)
+        public bool ContainsValue(TValue value)
         {
-            return this._contentDictionary.Remove(key);
+            return this.content.ContainsValue(value);
         }
 
-        public bool TryGetValue(TKey key, out TValue value)
+        public bool TryGetValue(TKey key, out TValue outValue)
         {
-            return this._contentDictionary.TryGetValue(key, out value);
+            return this.content.TryGetValue(key, out outValue);
         }
 
-        public TValue this[TKey key]
+        #endregion
+    }
+    /// <summary>
+    /// Collection of keyable values obtainable via key or index.
+    /// </summary>
+    /// <typeparam name="TKey"> Key Type.</typeparam>
+    /// <typeparam name="TValue">Value Type.</typeparam>
+    [System.Serializable]
+    public abstract class DataSet<TKey, TValue> : CollectionPair<TKey, TValue> where TValue : Data<TKey>
+    {
+        #region CollectionPair
+        protected override bool BuildDictionary()
         {
-            get
+            if (this.content == null)
+                this.content = new Dictionary<TKey, TValue>(this._content.Count);
+            else
+                this.content.Clear();
+
+            //Add content from list to dictionary
+            foreach (var element in this._content)
             {
-                return this._contentDictionary[key];
+                if (this.content.ContainsKey(element.id))
+                    Debug.LogWarning("Id " + element.id + " present in the set. Overwriting...");
+                this.content[element.id] = element;
             }
 
-            set
+            return true;
+        }
+
+        public virtual void AddContent(TValue data)
+        {
+            if (this._content.AddOnce(data))
+                this.content[data.id] = data;
+        }
+
+        public override bool RemoveContent(TValue data)
+        {
+            if (this._content.Remove(data))
             {
-                this._contentDictionary[key] = value;
+                this.content[data.id] = data;
+                return true;
             }
+            return false;
         }
 
-        public ICollection<TKey> Keys
-        {
-            get
-            {
-                return this._contentDictionary.Keys;
-            }
-        }
-
-        public ICollection<TValue> Values
-        {
-            get
-            {
-                return this._contentDictionary.Values;
-            }
-        }
-
-        public void Add(KeyValuePair<TKey, TValue> item)
-        {
-            ((IDictionary<TKey, TValue>)this._contentDictionary).Add(item);
-        }
-
-        public bool Contains(KeyValuePair<TKey, TValue> item)
-        {
-            return ((IDictionary<TKey, TValue>)this._contentDictionary).Contains(item);
-        }
-
-        public void CopyTo(KeyValuePair<TKey, TValue>[] array, int arrayIndex)
-        {
-            ((IDictionary<TKey, TValue>)this._contentDictionary).CopyTo(array, arrayIndex);
-        }
-
-        public bool Remove(KeyValuePair<TKey, TValue> item)
-        {
-            return ((IDictionary<TKey, TValue>)this._contentDictionary).Remove(item);
-        }
-
-        IEnumerator<KeyValuePair<TKey, TValue>> IEnumerable<KeyValuePair<TKey, TValue>>.GetEnumerator()
-        {
-            return ((IDictionary<TKey, TValue>)this._contentDictionary).GetEnumerator();
-        }
+        #endregion
     }
 
     /// <summary>
@@ -328,7 +356,7 @@
 
         public override bool Initialize()
         {
-            //Load();
+            Load();
             return base.Initialize();
         }
 
@@ -345,6 +373,7 @@
             LoadDefinitionSet(this);
             this.IsInitialized = false;
         }
+
         #endregion
 
         #region IO
@@ -398,11 +427,6 @@
             return Initialize();
         }
 
-        //public override bool Initialize()
-        //{
-        //    return base.Initialize();
-        //}
-
         public void DefineSet(DefinitionSet<TDefinition> definitionSet)
         {
             foreach (var data in this._content)
@@ -425,7 +449,10 @@
 
     public abstract class Definition : Data<string>
     {
-        //public string id;
+        //TODO: Implement fast hash search
+        [System.NonSerialized]
+        public int hash;
+
     }
 
     public class DefinableData<T> : Data<string>, IDefinable<T> where T : Definition
@@ -489,7 +516,7 @@
         void SetContent(T content);
 
         T GetContent();
-
+        
     }
 
     public static class DataUtility
@@ -628,7 +655,7 @@
         {
             StringBuilder toScrambleSB = new StringBuilder(toScramble);
             StringBuilder scrambleAddition = new StringBuilder(toScramble.Substring(0, toScramble.Length / 2 + 1));
-            for (int i = 0, j = 0; i < toScrambleSB.Length; i = i + 2, ++j)
+            for (int i = 0, j = 0;i < toScrambleSB.Length;i = i + 2, ++j)
             {
                 scrambleAddition[j] = toScrambleSB[i];
                 toScrambleSB[i] = 'c';
@@ -652,7 +679,7 @@
             int lengthOfRealData = int.Parse(strLength);
             StringBuilder toUnscramble = new StringBuilder(scrambled.Substring(indexOfLenghtMarker + 1, lengthOfRealData));
             string substitution = scrambled.Substring(indexOfLenghtMarker + 1 + lengthOfRealData);
-            for (int i = 0, j = 0; i < toUnscramble.Length; i = i + 2, ++j)
+            for (int i = 0, j = 0;i < toUnscramble.Length;i = i + 2, ++j)
                 toUnscramble[i] = substitution[j];
 
             return toUnscramble.ToString();
@@ -733,7 +760,7 @@
         public static List<string> OptimizeStringList(List<string> toOptimize)
         {
             toOptimize.Sort();
-            for (int i = toOptimize.Count - 1; i >= 0; --i)
+            for (int i = toOptimize.Count - 1;i >= 0;--i)
             {
                 toOptimize[i] = toOptimize[i].Trim().ToLower();
                 if (i < toOptimize.Count - 1)

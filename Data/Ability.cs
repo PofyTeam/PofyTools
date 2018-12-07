@@ -201,7 +201,7 @@ namespace PofyTools
         {
             if (!this.IsInitialized)
             {
-                this._contentDictionary = new Dictionary<string, AbilityData>(abilityDefinitions.Count);
+                this.content = new Dictionary<string, AbilityData>(abilityDefinitions.Count);
 
                 foreach (var abilityDefinition in abilityDefinitions)
                 {
@@ -211,7 +211,7 @@ namespace PofyTools
                     this._content.Add(data);
 
                     //dictionary
-                    this._contentDictionary[data.id] = data;
+                    this.content[data.id] = data;
 
                     //
                     if (abilityDefinition.baseAbilities.Count == 0)
@@ -241,7 +241,7 @@ namespace PofyTools
                     foreach (var baseAbility in data.Definition.baseAbilities)
                     {
                         AbilityData baseData;
-                        if (this._contentDictionary.TryGetValue(baseAbility, out baseData))
+                        if (this.content.TryGetValue(baseAbility, out baseData))
                         {
                             baseData.AddSubability(data);
                         }
