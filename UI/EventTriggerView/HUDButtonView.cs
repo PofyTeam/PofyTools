@@ -23,8 +23,8 @@
         protected override void Awake()
         {
             base.Awake();
-            this._selfTransform = this.transform;
-            //this._visual = this._selfTransform.Find("Visual");
+            //this.transform = this.transform;
+            //this._visual = this.transform.Find("Visual");
             //this._icon = this._visual.GetComponent<Image>();
         }
 
@@ -70,10 +70,10 @@
             this.pulseState = new HUDButtonPulseState(this, this.pulseCurve);
         }
 
-        public override void InitializeStateStack()
-        {
-            this._stateStack = new List<IState>(1);
-        }
+        //public override void InitializeStateStack()
+        //{
+        //    this._stateStack = new List<IState>(1);
+        //}
     }
 
     public class HUDButtonScaleState : StateObject<HUDButtonView>
@@ -96,11 +96,11 @@
 
         public override void EnterState()
         {
-            this.duration = this.ControlledObject.scaleDuration;
+            this.duration = this[0].scaleDuration;
             this._timer = this.duration;
 
-            this._startFactor = this.ControlledObject.visual.localScale[0];
-            this._targetFactor = (this.scaleIn) ? this.ControlledObject.minScale : this.ControlledObject.maxScale;
+            this._startFactor = this[0].visual.localScale[0];
+            this._targetFactor = (this.scaleIn) ? this[0].minScale : this[0].maxScale;
         }
 
         public override bool UpdateState()
@@ -110,10 +110,10 @@
                 this._timer = 0;
 
             float normalizedTime = 1 - this._timer / this.duration;
-            float mappedTime = this.ControlledObject.scaleCurve.Evaluate(normalizedTime);
+            float mappedTime = this[0].scaleCurve.Evaluate(normalizedTime);
             float factor = Mathf.LerpUnclamped(this._startFactor, this._targetFactor, mappedTime);
 
-            this.ControlledObject.visual.localScale = Vector3.one * factor;
+            this[0].visual.localScale = Vector3.one * factor;
 
             if (this._timer <= 0)
                 return true;
@@ -145,7 +145,7 @@
         public override void EnterState()
         {
             this._timer = this.duration;
-            this.ControlledObject.visual.localScale = Vector3.one;
+            this[0].visual.localScale = Vector3.one;
         }
 
         public override bool UpdateState()
@@ -155,7 +155,7 @@
                 this._timer = 0;
             float normalizedTime = 1 - this._timer / this.duration;
             float newScale = this.curve.Evaluate(normalizedTime) * this.maxScale;
-            this.ControlledObject.visual.localScale = Vector3.one * (1 + newScale);
+            this[0].visual.localScale = Vector3.one * (1 + newScale);
 
             if (this._timer <= 0)
                 return true;
@@ -164,7 +164,7 @@
 
         public override void ExitState()
         {
-            this.ControlledObject.visual.localScale = Vector3.one;
+            this[0].visual.localScale = Vector3.one;
         }
     }
 }

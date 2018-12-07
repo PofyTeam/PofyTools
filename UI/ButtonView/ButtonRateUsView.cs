@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Analytics;
+//using UnityEngine.Analytics;
 
 namespace PofyTools
 {

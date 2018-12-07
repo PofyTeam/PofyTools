@@ -11,6 +11,10 @@ namespace PofyTools
         #region Variables
         [SerializeField]
         protected CanvasGroup _canvasGroup;
+
+        [SerializeField]
+        protected Selectable _firstSelectable;
+
         protected List<Selectable> _selectebles = new List<Selectable>();
         [SerializeField]
         protected bool _closeOnSubscribe = false;
@@ -56,8 +60,10 @@ namespace PofyTools
             //if (!this._isOpen)
             //{
             this.gameObject.SetActive(true);
-            this.EnableElements();
+            EnableElements();
             this._canvasGroup.alpha = 1f;
+            
+            if (this._firstSelectable) _firstSelectable.Select();
 
             this._isOpen = true;
             //}
@@ -67,7 +73,7 @@ namespace PofyTools
         {
             //if (this._isOpen)
             //{
-            this.DisableElements();
+            DisableElements();
             this._canvasGroup.alpha = 0f;
             this.gameObject.SetActive(false);
 
@@ -121,7 +127,6 @@ namespace PofyTools
         {
             if (base.Subscribe())
             {
-                //
                 if (this._closeOnSubscribe)
                 {
                     this._isOpen = true;
@@ -136,7 +141,6 @@ namespace PofyTools
         {
             if (base.Unsubscribe())
             {
-                //
                 return true;
             }
             return false;
@@ -183,11 +187,10 @@ namespace PofyTools
 
         public override void ConstructAvailableStates()
         {
-            base.ConstructAvailableStates();
             this._fadeState = new FadeState(this, 1f);
         }
 
-        public class FadeState : TimedStateObject<Panel>//TODO: Make all panels IFadeable
+        public class FadeState : TimedStateObject<Panel>
         {
             private int _direction = 1;
             public FadeState(Panel controlledObject, float duration) : base(controlledObject, duration)
@@ -197,7 +200,7 @@ namespace PofyTools
             {
                 base.InitializeState();
 
-                this.IgnoreStacking = true;
+                //this.IgnoreStacking = true;
                 this.IsPermanent = false;
 
             }
@@ -214,7 +217,7 @@ namespace PofyTools
                 // Debug.Log (TAG + "EnterState");
                 base.EnterState();
                 this._timeRange.Current = (this._direction > 0) ? this._timeRange.min : this._timeRange.max;
-                this.ControlledObject.FadeStart();
+                this[0].FadeStart();
             }
 
             public override bool LateUpdateState()
@@ -224,7 +227,7 @@ namespace PofyTools
 
                 this._timeRange.Current += deltaTime;
 
-                this.ControlledObject._canvasGroup.alpha = this._timeRange.CurrentToMaxRatio;
+                this[0]._canvasGroup.alpha = this._timeRange.CurrentToMaxRatio;
 
                 if (this._direction > 0 && this._timeRange.AtMax || this._direction < 0 && this._timeRange.AtMin)
                     return true;
@@ -234,7 +237,7 @@ namespace PofyTools
 
             public override void ExitState()
             {
-                this.ControlledObject.FadeComplete(this._direction);
+                this[0].FadeComplete(this._direction);
                 base.ExitState();
             }
         }

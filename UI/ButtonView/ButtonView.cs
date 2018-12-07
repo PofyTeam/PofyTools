@@ -11,6 +11,12 @@ namespace PofyTools
         protected Button _button;
         [SerializeField]
         protected Image icon;
+
+        public void SetIcon(Sprite newIcon)
+        {
+            this.icon.sprite = newIcon;
+        }
+
         [SerializeField]
         protected Text _label;
 

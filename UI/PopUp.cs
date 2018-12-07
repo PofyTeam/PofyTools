@@ -11,21 +11,6 @@ namespace PofyTools
         public float duration;
         private float _timer;
         public bool repeat;
-        private Transform _selfTransform = null;
-
-        #region Initialize
-
-        public override bool Initialize()
-        {
-            if (base.Initialize())
-            {
-                this._selfTransform = this.transform;
-                return true;
-            }
-            return false;
-        }
-
-        #endregion
 
         // Use this for initialization
         protected override void Start()
@@ -52,7 +37,7 @@ namespace PofyTools
 
             float normalizedTime = 1 - (this._timer / this.duration);
             float scaleFactor = curve.Evaluate(normalizedTime);
-            this._selfTransform.localScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
+            this.transform.localScale = new Vector3(scaleFactor, scaleFactor, scaleFactor);
 		
             if (this._timer <= 0)
                 ExitPopUpState();
