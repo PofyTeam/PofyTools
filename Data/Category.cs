@@ -1,7 +1,7 @@
-﻿using System.Collections;
+﻿using Extensions;
 using System.Collections.Generic;
 using UnityEngine;
-using Extensions;
+using UnityEngine.Serialization;
 
 namespace PofyTools
 {
@@ -14,15 +14,16 @@ namespace PofyTools
             this.id = key;
         }
 
-        [Header("Display Name")]
-        public string displayName;
+        //[Header("Display Name")]
+        //public string displayName;
 
-        [TextArea]
-        [Header("Category Description")]
-        public string categoryDescription;
+        //[Header("Category Description Id")]
+        //[FormerlySerializedAs("categoryDescription")]
+        //public string descriptionId;
 
         [Header("Base Categories")]
-        public List<string> baseCategories = new List<string>();
+        [FormerlySerializedAs("baseCategories")]
+        public List<string> baseIds = new List<string>();
 
     }
 
@@ -43,10 +44,10 @@ namespace PofyTools
                     continue;
                 }
 
-                element.displayName = (string.IsNullOrEmpty(element.displayName)) ? element.id.ToTitle() : element.displayName;
+                //element.displayName = (string.IsNullOrEmpty(element.displayName)) ? element.id.ToTitle() : element.displayName;
 
-                element.baseCategories.Remove(string.Empty);
-                element.baseCategories.Remove(element.id);
+                element.baseIds.RemoveAll(x => string.IsNullOrEmpty(x));
+                element.baseIds.Remove(element.id);
             }
 
             DataUtility.OptimizeDefinitions(this._content);
@@ -85,7 +86,8 @@ namespace PofyTools
 
         public bool IsCategoryOf(string category)
         {
-            if (this.id == category) return true;
+            if (this.id == category)
+                return true;
 
             foreach (var cat in this.descriptor.supercategoryIds)
             {
@@ -155,7 +157,7 @@ namespace PofyTools
                     //dictionary
                     this.content[data.id] = data;
 
-                    if (category.baseCategories.Count == 0)
+                    if (category.baseIds.Count == 0)
                     {
                         this.rootCategories.Add(data);
                     }
@@ -175,7 +177,7 @@ namespace PofyTools
                 //find subcategories
                 foreach (var data in this._content)
                 {
-                    foreach (var baseCategory in data.Definition.baseCategories)
+                    foreach (var baseCategory in data.Definition.baseIds)
                     {
                         CategoryData baseData;
                         if (this.content.TryGetValue(baseCategory, out baseData))

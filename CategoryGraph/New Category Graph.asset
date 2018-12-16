@@ -1,0 +1,4979 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afd4a568bb4f1b419b0775f76ea8a3f, type: 3}
+  m_Name: New Category Graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 114749862919647770}
+  - {fileID: 114259620254961558}
+  - {fileID: 114446542119989616}
+  - {fileID: 114769898581457470}
+  - {fileID: 114230275106523530}
+  - {fileID: 114029485766155830}
+  - {fileID: 114286440628251790}
+  - {fileID: 114257802551859210}
+  - {fileID: 114293831787150738}
+  - {fileID: 114543913478019202}
+  - {fileID: 114119759096339116}
+  - {fileID: 114168690634110810}
+  - {fileID: 114241032745291574}
+  - {fileID: 114371250463697312}
+  - {fileID: 114298358932864510}
+  - {fileID: 114328274296467042}
+  - {fileID: 114648101874604730}
+  - {fileID: 114607969338539932}
+  - {fileID: 114527953635199340}
+  - {fileID: 114956310131026146}
+  - {fileID: 114960712197281536}
+  - {fileID: 114206683224872602}
+  - {fileID: 114640082911453396}
+  - {fileID: 114491824119810632}
+  - {fileID: 114354438982272128}
+  - {fileID: 114323742264453862}
+  - {fileID: 114418545045871942}
+  - {fileID: 114201965592548734}
+  - {fileID: 114584642849967270}
+  - {fileID: 114910930400319416}
+  - {fileID: 114224995847623054}
+  - {fileID: 114089141170735564}
+  - {fileID: 114409536000429942}
+  - {fileID: 114695689302217416}
+  - {fileID: 114041832208307232}
+  - {fileID: 114253982533722820}
+  - {fileID: 114449550451285824}
+  - {fileID: 114130319751125104}
+  - {fileID: 114492549241079486}
+  - {fileID: 114467006471022540}
+  - {fileID: 114598840594161620}
+  - {fileID: 114485980631543256}
+  - {fileID: 114175520987264486}
+  - {fileID: 114919190270398368}
+  - {fileID: 114874516375110306}
+  - {fileID: 114825423423944140}
+  - {fileID: 114843048995286460}
+  - {fileID: 114777423397154534}
+  - {fileID: 114181009225206060}
+  - {fileID: 114464253196481936}
+  - {fileID: 114654593955869868}
+  - {fileID: 114640422000953296}
+  - {fileID: 114277382213345226}
+  - {fileID: 114542532933795602}
+  - {fileID: 114119111773588488}
+  - {fileID: 114233673946196062}
+  - {fileID: 114649064016236098}
+  - {fileID: 114247743469855134}
+  - {fileID: 114727950537207392}
+  - {fileID: 114280074365439410}
+  - {fileID: 114738516675603052}
+  - {fileID: 114835883879881792}
+  - {fileID: 114628564795777214}
+  - {fileID: 114983069251851398}
+  - {fileID: 114519054002496096}
+  - {fileID: 114844253692516302}
+  - {fileID: 114541297600919148}
+  - {fileID: 114076419258759424}
+  - {fileID: 114582511879434568}
+  - {fileID: 114902908764541940}
+  - {fileID: 114611361510944504}
+  - {fileID: 114747019724291784}
+  - {fileID: 114405160633972476}
+  - {fileID: 114495923784610490}
+  - {fileID: 114988165313566756}
+  - {fileID: 114543789451103478}
+  - {fileID: 114828753803760848}
+  - {fileID: 114607335431674982}
+  - {fileID: 114241574923059130}
+  - {fileID: 114570093065519852}
+  - {fileID: 114460512560297824}
+  - {fileID: 114158313803240914}
+  - {fileID: 114067747590779610}
+  - {fileID: 114588277669561222}
+  - {fileID: 114324050408414968}
+  - {fileID: 114757720053738314}
+  - {fileID: 114664380970320016}
+  - {fileID: 114118619768249832}
+  - {fileID: 114160642949834474}
+  - {fileID: 114067917405485512}
+  - {fileID: 114057780500168508}
+  - {fileID: 114908488555462064}
+  - {fileID: 114600991405087544}
+  - {fileID: 114504925615824246}
+  - {fileID: 114390635291779246}
+  - {fileID: 114186114316306942}
+  - {fileID: 114011997174577730}
+  - {fileID: 114132264393013906}
+  - {fileID: 114056904775935598}
+  - {fileID: 114443900291486058}
+  - {fileID: 114090581615164292}
+  - {fileID: 114623024822666194}
+  - {fileID: 114514406272749892}
+  - {fileID: 114073502206830798}
+  - {fileID: 114816350840015860}
+  - {fileID: 114151601682328056}
+  - {fileID: 114034401780055414}
+  - {fileID: 114289109581378550}
+  - {fileID: 114950953402802330}
+  - {fileID: 114892364131215470}
+  - {fileID: 114913930843093704}
+  - {fileID: 114227541807767034}
+  - {fileID: 114848839904819648}
+  _setNode: {fileID: 114405160633972476}
+--- !u!114 &114011997174577730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: resource_stamina
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -168, y: -1480}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114011997174577730}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114390635291779246}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114011997174577730}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114443900291486058}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114727950537207392}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114029485766155830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: wolf
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 680, y: -136}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114029485766155830}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114323742264453862}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114029485766155830}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114201965592548734}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114230275106523530}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: wolf
+--- !u!114 &114034401780055414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: silver_amulet
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 504, y: -2744}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114034401780055414}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114073502206830798}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114289109581378550}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114034401780055414}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114041832208307232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: forest_dragon
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1048, y: 536}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114041832208307232}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114584642849967270}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114041832208307232}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114056904775935598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: health_potion
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 360, y: -2072}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114056904775935598}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114908488555462064}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114186114316306942}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114056904775935598}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114057780500168508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: consumable
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -568, y: -1848}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114057780500168508}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114224995847623054}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114057780500168508}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114600991405087544}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114504925615824246}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114067747590779610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: snake
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 696, y: 696}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114067747590779610}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114910930400319416}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114067747590779610}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114460512560297824}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114067917405485512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: boots
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -88, y: -2728}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114067917405485512}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114160642949834474}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114067917405485512}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114073502206830798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: amulet
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -88, y: -2920}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114073502206830798}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114623024822666194}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114073502206830798}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114816350840015860}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114034401780055414}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114076419258759424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: wererat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1272, y: -360}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114076419258759424}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114747019724291784}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114844253692516302}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114076419258759424}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114089141170735564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: weapon
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -440, y: -2248}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114089141170735564}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114224995847623054}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114089141170735564}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114956310131026146}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114409536000429942}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114280074365439410}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114495923784610490}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114090581615164292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: focus_potion
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 360, y: -1848}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114090581615164292}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114908488555462064}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114132264393013906}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114090581615164292}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114118619768249832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: headgear
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -440, y: -2504}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114118619768249832}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114224995847623054}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114118619768249832}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114181009225206060}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114119111773588488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: ability
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 632, y: -2248}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114119111773588488}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114119111773588488}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114649064016236098}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114247743469855134}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114727950537207392}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114119759096339116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: magic_ice
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -696, y: 696}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114119759096339116}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114257802551859210}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114119759096339116}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: magic_ice
+--- !u!114 &114130319751125104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: fungi
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1160, y: -264}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114130319751125104}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114960712197281536}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114130319751125104}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114132264393013906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: resource_focus
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -168, y: -1368}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114132264393013906}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114390635291779246}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114132264393013906}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114090581615164292}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114649064016236098}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114151601682328056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: silver_ring
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 504, y: -3000}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114151601682328056}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114514406272749892}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114289109581378550}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114151601682328056}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114158313803240914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: vampire
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: 1336}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114158313803240914}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114446542119989616}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114749862919647770}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114158313803240914}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114160642949834474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: footwear
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -440, y: -2616}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114160642949834474}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114224995847623054}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114160642949834474}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114067917405485512}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114168690634110810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: magic_earth
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -696, y: 808}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114168690634110810}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114257802551859210}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114168690634110810}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114543789451103478}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: magic_earth
+--- !u!114 &114175520987264486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: gold_ring
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 504, y: -3128}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114175520987264486}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114919190270398368}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114514406272749892}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114175520987264486}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114181009225206060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: hat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -88, y: -2600}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114181009225206060}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114118619768249832}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114181009225206060}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114777423397154534}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114186114316306942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: resource_health
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -168, y: -1592}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114186114316306942}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114390635291779246}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114186114316306942}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114056904775935598}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114247743469855134}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114201965592548734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: dire_wolf
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 984, y: 312}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114201965592548734}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114418545045871942}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114029485766155830}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114201965592548734}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: dire_wolf
+--- !u!114 &114206683224872602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: container
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -872, y: -456}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114206683224872602}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114206683224872602}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114640082911453396}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: container
+--- !u!114 &114224995847623054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: equipment
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -792, y: -2328}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114224995847623054}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114224995847623054}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114089141170735564}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114654593955869868}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114118619768249832}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114160642949834474}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114057780500168508}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114623024822666194}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114227541807767034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: ruby
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1736, y: -792}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114227541807767034}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114828753803760848}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114227541807767034}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114230275106523530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: werewolf
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1272, y: -216}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114230275106523530}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114747019724291784}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114029485766155830}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114230275106523530}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: werewolf
+--- !u!114 &114233673946196062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: ability_bash
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1272, y: -1992}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114233673946196062}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114727950537207392}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114233673946196062}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114241032745291574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: magic_air
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -696, y: 920}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114241032745291574}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114257802551859210}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114241032745291574}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: magic_air
+--- !u!114 &114241574923059130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: centaur
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1912, y: 120}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114241574923059130}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114757720053738314}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114241574923059130}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114247743469855134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: ability_health
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1000, y: -2072}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114247743469855134}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114119111773588488}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114186114316306942}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114247743469855134}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114253982533722820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: forest_ghost
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 584, y: 1048}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114253982533722820}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114449550451285824}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114253982533722820}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114257802551859210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: elemental
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1048, y: 728}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114257802551859210}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114286440628251790}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114257802551859210}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114293831787150738}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114119759096339116}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114168690634110810}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114241032745291574}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: elemental
+--- !u!114 &114259620254961558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: zombie
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: 632}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114259620254961558}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114749862919647770}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114446542119989616}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114259620254961558}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: zombie
+--- !u!114 &114277382213345226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: mimic
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -392, y: -312}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114277382213345226}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114354438982272128}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114277382213345226}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114542532933795602}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114902908764541940}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114280074365439410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: ability_throw_weapon
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1272, y: -1864}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114280074365439410}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114727950537207392}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114089141170735564}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114280074365439410}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114738516675603052}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114835883879881792}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114628564795777214}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114286440628251790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: magic
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1384, y: 840}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114286440628251790}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114286440628251790}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114257802551859210}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114543913478019202}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114695689302217416}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: magic
+--- !u!114 &114289109581378550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: silver
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1736, y: -1032}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114289109581378550}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114874516375110306}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114289109581378550}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114151601682328056}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114034401780055414}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114293831787150738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: magic_fire
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -696, y: 584}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114293831787150738}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114257802551859210}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114293831787150738}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: magic_fire
+--- !u!114 &114298358932864510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: android
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -376, y: 168}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114298358932864510}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114371250463697312}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114769898581457470}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114298358932864510}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: android
+--- !u!114 &114323742264453862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: fauna
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1272, y: 24}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114323742264453862}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114323742264453862}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114418545045871942}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114910930400319416}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114769898581457470}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114354438982272128}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114467006471022540}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114541297600919148}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114029485766155830}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114988165313566756}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114324050408414968}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: fauna
+--- !u!114 &114324050408414968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: fish
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: 1208}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114324050408414968}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114323742264453862}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114324050408414968}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114588277669561222}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114328274296467042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: mechanical
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1096, y: 216}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114328274296467042}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114328274296467042}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114371250463697312}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: mechanical
+--- !u!114 &114354438982272128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: monster
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -712, y: -120}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114354438982272128}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114323742264453862}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114354438982272128}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114491824119810632}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114277382213345226}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: monster
+--- !u!114 &114371250463697312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: automaton
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -712, y: 200}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114371250463697312}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114328274296467042}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114648101874604730}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114371250463697312}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114298358932864510}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: automaton
+--- !u!114 &114390635291779246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: resource
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -456, y: -1480}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114390635291779246}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114390635291779246}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114186114316306942}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114011997174577730}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114132264393013906}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114405160633972476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df321922f5ee1640b7a7376033506f1, type: 3}
+  m_Name: Category Set Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -5464.331, y: -3400.4375}
+  ports:
+    keys: []
+    values: []
+  DEFINITIONS_PATH: Definitions
+  FILE_NAME: categories
+  FILE_EXTENSION: json
+  PROTECT_DATA: 0
+  _lastPath: E:/Repositories/PofyToolsProject/Assets/Resources/Definitions/categories.json
+--- !u!114 &114409536000429942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: flying_blade
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 680, y: 120}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114409536000429942}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114089141170735564}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114695689302217416}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114409536000429942}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114418545045871942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: megafauna
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: 248}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114418545045871942}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114323742264453862}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114418545045871942}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114201965592548734}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114584642849967270}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: megafauna
+--- !u!114 &114443900291486058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: stamina_potion
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 360, y: -1960}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114443900291486058}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114908488555462064}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114011997174577730}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114443900291486058}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114446542119989616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: undead
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -408, y: 1400}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114446542119989616}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114543913478019202}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114446542119989616}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114259620254961558}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114449550451285824}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114582511879434568}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114158313803240914}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: undead
+--- !u!114 &114449550451285824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: ghost
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: 1048}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114449550451285824}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114446542119989616}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114449550451285824}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114253982533722820}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114460512560297824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: naga
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1912, y: 376}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114460512560297824}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114067747590779610}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114757720053738314}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114460512560297824}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114464253196481936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: wooden_shiled
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -88, y: -2456}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114464253196481936}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114654593955869868}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114640422000953296}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114464253196481936}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114467006471022540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: deamon
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -712, y: -8}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114467006471022540}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114323742264453862}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114467006471022540}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114485980631543256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: bacterium
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1160, y: -488}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114485980631543256}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114960712197281536}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114485980631543256}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114491824119810632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: clawer
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: -296}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114491824119810632}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114769898581457470}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114354438982272128}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114491824119810632}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: clawer
+--- !u!114 &114492549241079486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: human_skeleton
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 632, y: 856}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114492549241079486}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114582511879434568}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114492549241079486}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114495923784610490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: sword
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 696, y: -488}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114495923784610490}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114089141170735564}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114495923784610490}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114843048995286460}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114504925615824246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: medicine
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -248, y: -1800}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114504925615824246}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114057780500168508}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114504925615824246}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114908488555462064}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114514406272749892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: ring
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -88, y: -3048}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114514406272749892}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114623024822666194}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114514406272749892}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114175520987264486}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114151601682328056}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114519054002496096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: ability_magic
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1272, y: -1608}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114519054002496096}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114649064016236098}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114519054002496096}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114983069251851398}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114527953635199340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: bandit
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: 88}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114527953635199340}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114749862919647770}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114527953635199340}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: bandit
+--- !u!114 &114541297600919148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: rodent
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -712, y: -248}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114541297600919148}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114323742264453862}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114541297600919148}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114844253692516302}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114542532933795602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: mimic_chest
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: -728}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114542532933795602}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114277382213345226}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114640082911453396}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114542532933795602}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114543789451103478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: stone_golem
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: 360}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114543789451103478}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114769898581457470}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114168690634110810}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114828753803760848}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114543789451103478}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114543913478019202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: curse
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1032, y: 1288}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114543913478019202}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114286440628251790}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114543913478019202}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114446542119989616}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114747019724291784}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: curse
+--- !u!114 &114570093065519852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: minotaur
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1912, y: 248}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114570093065519852}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114757720053738314}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114769898581457470}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114570093065519852}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114582511879434568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: skeleton
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: 920}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114582511879434568}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114446542119989616}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114695689302217416}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114582511879434568}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114492549241079486}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114584642849967270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: dragon
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 696, y: 536}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114584642849967270}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114910930400319416}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114418545045871942}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114584642849967270}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114041832208307232}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114588277669561222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: mermaid
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1912, y: 504}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114588277669561222}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114324050408414968}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114757720053738314}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114588277669561222}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114598840594161620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: virus
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1160, y: -376}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114598840594161620}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114960712197281536}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114598840594161620}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114600991405087544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: food
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -264, y: -1976}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114600991405087544}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114057780500168508}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114600991405087544}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114607335431674982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: harpy
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1912, y: -8}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114607335431674982}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114757720053738314}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114607335431674982}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114607969338539932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: magic_electricity
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -696, y: 1032}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114607969338539932}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114648101874604730}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114607969338539932}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: magic_electricity
+--- !u!114 &114611361510944504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: tree
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1160, y: -712}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114611361510944504}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114960712197281536}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114611361510944504}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114902908764541940}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114623024822666194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: jewelry
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -440, y: -2776}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114623024822666194}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114224995847623054}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114623024822666194}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114514406272749892}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114073502206830798}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114628564795777214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: ability_throw_axe
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1528, y: -1992}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114628564795777214}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114280074365439410}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114628564795777214}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114640082911453396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: chest
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -600, y: -456}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114640082911453396}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114206683224872602}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114640082911453396}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114542532933795602}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: chest
+--- !u!114 &114640422000953296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: material_wood
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -2120, y: -1576}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114640422000953296}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114640422000953296}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114464253196481936}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114902908764541940}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114648101874604730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: electrical
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1096, y: 344}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114648101874604730}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114648101874604730}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114371250463697312}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114607969338539932}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: electrical
+--- !u!114 &114649064016236098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: ability_focus
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1000, y: -1800}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114649064016236098}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114119111773588488}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114132264393013906}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114649064016236098}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114519054002496096}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114654593955869868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: shield
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -440, y: -2376}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114654593955869868}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114224995847623054}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114654593955869868}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114464253196481936}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114664380970320016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: shrub
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1160, y: -600}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114664380970320016}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114960712197281536}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114664380970320016}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114956310131026146}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114695689302217416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: animated
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -392, y: 728}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114695689302217416}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114286440628251790}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114695689302217416}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114409536000429942}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114582511879434568}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114727950537207392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: ability_stamina
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1000, y: -1944}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114727950537207392}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114119111773588488}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114011997174577730}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114727950537207392}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114233673946196062}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114280074365439410}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114738516675603052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: ability_throw_knife
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1528, y: -1736}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114738516675603052}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114280074365439410}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114738516675603052}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114747019724291784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: therianthrope
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 952, y: -296}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114747019724291784}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114749862919647770}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114543913478019202}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114747019724291784}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114076419258759424}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114230275106523530}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114749862919647770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: human
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -392, y: 536}
+  ports:
+    keys:
+    - categoryId
+    - baseCategories
+    values:
+    - _fieldName: categoryId
+      _node: {fileID: 114749862919647770}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114259620254961558}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114527953635199340}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114747019724291784}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114158313803240914}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: baseCategories
+      _node: {fileID: 114749862919647770}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114769898581457470}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: human
+--- !u!114 &114757720053738314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: antropomorph
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1272, y: -72}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114757720053738314}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114757720053738314}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114607335431674982}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114241574923059130}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114570093065519852}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114460512560297824}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114588277669561222}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114769898581457470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: humanoid
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -696, y: 408}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114769898581457470}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114323742264453862}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114769898581457470}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114749862919647770}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114298358932864510}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114491824119810632}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114543789451103478}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114570093065519852}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: humanoid
+--- !u!114 &114777423397154534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: mage_hat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 200, y: -2584}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114777423397154534}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114181009225206060}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114777423397154534}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114816350840015860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: gold_amulet
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 504, y: -2872}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114816350840015860}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114073502206830798}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114919190270398368}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114816350840015860}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114825423423944140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: iron
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1736, y: -1256}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114825423423944140}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114874516375110306}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114825423423944140}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114843048995286460}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114828753803760848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: material_stone
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -2120, y: -776}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114828753803760848}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114828753803760848}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114543789451103478}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114913930843093704}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114227541807767034}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114848839904819648}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114835883879881792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: ability_throw_spear
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1528, y: -1864}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114835883879881792}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114280074365439410}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114835883879881792}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114843048995286460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: iron_sword
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 952, y: -600}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114843048995286460}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114825423423944140}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114495923784610490}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114843048995286460}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114844253692516302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: rat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 696, y: -376}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114844253692516302}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114541297600919148}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114844253692516302}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114076419258759424}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114848839904819648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: emerald
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1736, y: -680}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114848839904819648}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114828753803760848}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114848839904819648}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114874516375110306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: material_metal
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -2120, y: -1192}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114874516375110306}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114874516375110306}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114919190270398368}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114825423423944140}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114289109581378550}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114950953402802330}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114892364131215470}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114892364131215470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: bronze
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1736, y: -1480}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114892364131215470}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114874516375110306}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114892364131215470}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114902908764541940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: stump_monster
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1272, y: -712}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114902908764541940}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114277382213345226}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114611361510944504}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114640422000953296}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114902908764541940}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114908488555462064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: potion
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 24, y: -1848}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114908488555462064}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114504925615824246}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114908488555462064}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114056904775935598}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114443900291486058}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114090581615164292}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114910930400319416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: reptile
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: 776}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114910930400319416}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114323742264453862}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114910930400319416}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114584642849967270}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114067747590779610}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114913930843093704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: diamond
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1736, y: -904}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114913930843093704}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114828753803760848}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114913930843093704}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114919190270398368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: golden
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1736, y: -1144}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114919190270398368}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114874516375110306}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114919190270398368}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114175520987264486}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114816350840015860}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114950953402802330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: steel
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1736, y: -1368}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114950953402802330}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114874516375110306}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114950953402802330}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114956310131026146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: blade_bush
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 680, y: -24}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114956310131026146}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114089141170735564}
+        reroutePoints: []
+      - fieldName: categoryId
+        node: {fileID: 114664380970320016}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114956310131026146}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: blade_bush
+--- !u!114 &114960712197281536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: flora
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1736, y: -520}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114960712197281536}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114960712197281536}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: baseCategories
+        node: {fileID: 114130319751125104}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114598840594161620}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114485980631543256}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114611361510944504}
+        reroutePoints: []
+      - fieldName: baseCategories
+        node: {fileID: 114664380970320016}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: flora
+--- !u!114 &114983069251851398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: power_lighning_strike
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1528, y: -1560}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114983069251851398}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114519054002496096}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114983069251851398}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 
+--- !u!114 &114988165313566756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b36684d7b6b0247b3a67fb2e7f93f6, type: 3}
+  m_Name: bat
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: 520}
+  ports:
+    keys:
+    - baseCategories
+    - categoryId
+    values:
+    - _fieldName: baseCategories
+      _node: {fileID: 114988165313566756}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: categoryId
+        node: {fileID: 114323742264453862}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _dynamic: 0
+    - _fieldName: categoryId
+      _node: {fileID: 114988165313566756}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _dynamic: 0
+  baseCategories: 
+  categoryId: 

@@ -140,7 +140,7 @@ namespace PofyTools
             Gizmos.color = tempColor;
         }
 
-        //TODO
+        
         public Vector3 GetRandomPointInisde()
         {
             //    Vector3 result = default (Vector3);

@@ -647,6 +647,20 @@
 
         }
 
+        public static SaveResult PanelSave(string fullPathNameExtension, object objectToSave)
+        {
+            var json = JsonUtility.ToJson(objectToSave);
+
+            //json = (encode) ? DataUtility.EncodeTo64(json) : json;
+            //json = (scramble) ? DataUtility.Scramble(json) : json;
+
+            File.WriteAllText(fullPathNameExtension, json);
+
+            var result = SaveResult.Done;
+            Debug.LogFormat("{0}File \"{1}\" saved successfully!", TAG, fullPathNameExtension);
+            return result;
+        }
+
         #endregion
 
         #region SCRAMBLE

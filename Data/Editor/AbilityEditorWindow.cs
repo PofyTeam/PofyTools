@@ -1,17 +1,12 @@
-﻿
-using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEditor;
 using UnityEngine;
-using UnityEditor;
-using PofyTools;
-using PofyTools;
 
 
 public class AbilityEditorWindow : EditorWindow
 {
     private string[] _ids = null;
 
-    [MenuItem("Warlander/Ability Definition Editor")]
+    [MenuItem("PofyTools/Ability Definition Editor")]
     static void Init()
     {
         // Get existing open window or if none, make a new one
@@ -107,7 +102,7 @@ public class AbilityEditorWindow : EditorWindow
             this._definitions.GetContent().Sort((x, y) => x.id.CompareTo(y.id));
         }
 
-        EditorGUILayout.LabelField("WARLANDER", GUILayout.Width(360));
+        EditorGUILayout.LabelField("", GUILayout.Width(360));
 
         if (GUILayout.Button("Base Ability", GUILayout.Width(310)))
         {
