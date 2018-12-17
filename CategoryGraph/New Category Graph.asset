@@ -170,7 +170,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: resource_stamina
 --- !u!114 &114029485766155830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,7 +257,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: silver_amulet
 --- !u!114 &114041832208307232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,7 +296,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: forest_dragon
 --- !u!114 &114056904775935598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +338,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: health_potion
 --- !u!114 &114057780500168508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: consumable
 --- !u!114 &114067747590779610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: snake
 --- !u!114 &114067917405485512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,7 +464,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: boots
 --- !u!114 &114073502206830798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,7 +509,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: amulet
 --- !u!114 &114076419258759424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,7 +551,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: wererat
 --- !u!114 &114089141170735564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,7 +602,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: weapon
 --- !u!114 &114090581615164292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,7 +644,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: focus_potion
 --- !u!114 &114118619768249832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,7 +686,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: headgear
 --- !u!114 &114119111773588488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -731,7 +731,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: ability
 --- !u!114 &114119759096339116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -809,7 +809,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: fungi
 --- !u!114 &114132264393013906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -854,7 +854,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: resource_focus
 --- !u!114 &114151601682328056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,7 +896,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: silver_ring
 --- !u!114 &114158313803240914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -938,7 +938,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: vampire
 --- !u!114 &114160642949834474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,7 +980,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: footwear
 --- !u!114 &114168690634110810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1064,7 +1064,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: gold_ring
 --- !u!114 &114181009225206060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1106,7 +1106,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: hat
 --- !u!114 &114186114316306942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1151,7 +1151,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: resource_health
 --- !u!114 &114201965592548734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1286,7 +1286,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: equipment
 --- !u!114 &114227541807767034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1325,7 +1325,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: ruby
 --- !u!114 &114230275106523530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1406,7 +1406,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: ability_bash
 --- !u!114 &114241032745291574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1484,7 +1484,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: centaur
 --- !u!114 &114247743469855134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1526,7 +1526,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: ability_health
 --- !u!114 &114253982533722820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1565,7 +1565,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: forest_ghost
 --- !u!114 &114257802551859210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1703,7 +1703,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: mimic
 --- !u!114 &114280074365439410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1754,7 +1754,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: ability_throw_weapon
 --- !u!114 &114286440628251790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1844,7 +1844,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: silver
 --- !u!114 &114293831787150738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2030,7 +2030,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: fish
 --- !u!114 &114328274296467042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2204,7 +2204,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: resource
 --- !u!114 &114405160633972476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2217,7 +2217,7 @@ MonoBehaviour:
   m_Name: Category Set Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -5464.331, y: -3400.4375}
+  position: {x: -709, y: -472}
   ports:
     keys: []
     values: []
@@ -2267,7 +2267,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: flying_blade
 --- !u!114 &114418545045871942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2354,7 +2354,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: stamina_potion
 --- !u!114 &114446542119989616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2447,7 +2447,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: ghost
 --- !u!114 &114460512560297824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2489,7 +2489,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: naga
 --- !u!114 &114464253196481936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2531,7 +2531,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: wooden_shiled
 --- !u!114 &114467006471022540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2570,7 +2570,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: deamon
 --- !u!114 &114485980631543256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2609,7 +2609,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: bacterium
 --- !u!114 &114491824119810632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2690,7 +2690,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: human_skeleton
 --- !u!114 &114495923784610490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2732,7 +2732,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: sword
 --- !u!114 &114504925615824246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2774,7 +2774,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: medicine
 --- !u!114 &114514406272749892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2819,7 +2819,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: ring
 --- !u!114 &114519054002496096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2861,7 +2861,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: ability_magic
 --- !u!114 &114527953635199340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2942,7 +2942,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: rodent
 --- !u!114 &114542532933795602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2984,7 +2984,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: mimic_chest
 --- !u!114 &114543789451103478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3029,7 +3029,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: stone_golem
 --- !u!114 &114543913478019202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3116,7 +3116,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: minotaur
 --- !u!114 &114582511879434568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3161,7 +3161,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: skeleton
 --- !u!114 &114584642849967270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3206,7 +3206,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: dragon
 --- !u!114 &114588277669561222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3248,7 +3248,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: mermaid
 --- !u!114 &114598840594161620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3287,7 +3287,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: virus
 --- !u!114 &114600991405087544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3326,7 +3326,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: food
 --- !u!114 &114607335431674982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3365,7 +3365,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: harpy
 --- !u!114 &114607969338539932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3446,7 +3446,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: tree
 --- !u!114 &114623024822666194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3491,7 +3491,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: jewelry
 --- !u!114 &114628564795777214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3530,7 +3530,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: ability_throw_axe
 --- !u!114 &114640082911453396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3614,7 +3614,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: material_wood
 --- !u!114 &114648101874604730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3701,7 +3701,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: ability_focus
 --- !u!114 &114654593955869868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3743,7 +3743,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: shield
 --- !u!114 &114664380970320016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3785,7 +3785,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: shrub
 --- !u!114 &114695689302217416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3830,7 +3830,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: animated
 --- !u!114 &114727950537207392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3878,7 +3878,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: ability_stamina
 --- !u!114 &114738516675603052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3917,7 +3917,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: ability_throw_knife
 --- !u!114 &114747019724291784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3965,7 +3965,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: therianthrope
 --- !u!114 &114749862919647770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4067,7 +4067,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: antropomorph
 --- !u!114 &114769898581457470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4160,7 +4160,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: mage_hat
 --- !u!114 &114816350840015860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4202,7 +4202,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: gold_amulet
 --- !u!114 &114825423423944140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4244,7 +4244,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: iron
 --- !u!114 &114828753803760848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4292,7 +4292,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: material_stone
 --- !u!114 &114835883879881792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4331,7 +4331,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: ability_throw_spear
 --- !u!114 &114843048995286460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4373,7 +4373,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: iron_sword
 --- !u!114 &114844253692516302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4415,7 +4415,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: rat
 --- !u!114 &114848839904819648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4454,7 +4454,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: emerald
 --- !u!114 &114874516375110306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4505,7 +4505,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: material_metal
 --- !u!114 &114892364131215470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4544,7 +4544,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: bronze
 --- !u!114 &114902908764541940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4589,7 +4589,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: stump_monster
 --- !u!114 &114908488555462064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4637,7 +4637,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: potion
 --- !u!114 &114910930400319416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4682,7 +4682,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: reptile
 --- !u!114 &114913930843093704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4721,7 +4721,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: diamond
 --- !u!114 &114919190270398368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4766,7 +4766,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: golden
 --- !u!114 &114950953402802330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4805,7 +4805,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: steel
 --- !u!114 &114956310131026146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4937,7 +4937,7 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: power_lighning_strike
 --- !u!114 &114988165313566756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4976,4 +4976,4 @@ MonoBehaviour:
       _connectionType: 0
       _dynamic: 0
   baseCategories: 
-  categoryId: 
+  categoryId: bat
