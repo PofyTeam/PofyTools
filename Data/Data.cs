@@ -226,6 +226,39 @@
             get { return this._content.Count; }
         }
 
+        /// <summary>
+        /// Get content from List via index.
+        /// </summary>
+        /// <param name="arg"></param>
+        /// <returns></returns>
+        public TValue this[int arg]
+        {
+            get
+            {
+                return this._content[arg];
+            }
+        }
+
+        public void RemoveAt(int index)
+        {
+            var element = this._content[index];
+            this._content.RemoveAt(index);
+
+            foreach (var pair in this.content)
+            {
+                if (pair.Value.Equals(element))
+                {
+                    //TODO: Check if breaks iterator 
+                    this.content.Remove(pair.Key);
+                    break;
+                }
+            }
+        }
+
+        public IEnumerator<TValue> GetEnumerator()
+        {
+            return this._content.GetEnumerator();
+        }
 
         #endregion
 
@@ -256,6 +289,14 @@
         {
             return this.content.TryGetValue(key, out outValue);
         }
+
+        //public TValue this[TKey arg]
+        //{
+        //    get
+        //    {
+        //        return this.content[arg];
+        //    }
+        //}
 
         #endregion
     }
@@ -516,7 +557,7 @@
         void SetContent(T content);
 
         T GetContent();
-        
+
     }
 
     public static class DataUtility
@@ -669,7 +710,7 @@
         {
             StringBuilder toScrambleSB = new StringBuilder(toScramble);
             StringBuilder scrambleAddition = new StringBuilder(toScramble.Substring(0, toScramble.Length / 2 + 1));
-            for (int i = 0, j = 0;i < toScrambleSB.Length;i = i + 2, ++j)
+            for (int i = 0, j = 0; i < toScrambleSB.Length; i = i + 2, ++j)
             {
                 scrambleAddition[j] = toScrambleSB[i];
                 toScrambleSB[i] = 'c';
@@ -693,7 +734,7 @@
             int lengthOfRealData = int.Parse(strLength);
             StringBuilder toUnscramble = new StringBuilder(scrambled.Substring(indexOfLenghtMarker + 1, lengthOfRealData));
             string substitution = scrambled.Substring(indexOfLenghtMarker + 1 + lengthOfRealData);
-            for (int i = 0, j = 0;i < toUnscramble.Length;i = i + 2, ++j)
+            for (int i = 0, j = 0; i < toUnscramble.Length; i = i + 2, ++j)
                 toUnscramble[i] = substitution[j];
 
             return toUnscramble.ToString();
@@ -774,7 +815,7 @@
         public static List<string> OptimizeStringList(List<string> toOptimize)
         {
             toOptimize.Sort();
-            for (int i = toOptimize.Count - 1;i >= 0;--i)
+            for (int i = toOptimize.Count - 1; i >= 0; --i)
             {
                 toOptimize[i] = toOptimize[i].Trim().ToLower();
                 if (i < toOptimize.Count - 1)
