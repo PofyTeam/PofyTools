@@ -551,4 +551,13 @@ namespace Extensions
         //}
 
     }
+    static class RandomExtensions
+    {
+        public static long RandomLong(this System.Random rnd)
+        {
+            byte[] buffer = new byte[8];
+            rnd.NextBytes(buffer);
+            return System.BitConverter.ToInt64(buffer, 0);
+        }
+    }
 }
