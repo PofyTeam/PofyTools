@@ -4,11 +4,11 @@
     using System.Collections.Generic;
     using UnityEngine;
 
-    public class Timeline<T, U>
+    public class Timeline<TEventContent, TEventKey>
     {
         protected List<TimeEvent> _events = null;
-        public Dictionary<U, TimeEvent> _lastEventOfType = null;
-        public TimeEvent nullVar { get { return null; } }
+        public Dictionary<TEventKey, TimeEvent> _lastEventOfType = null;
+        public TimeEvent NullVar { get { return null; } }
         protected Range _eventSpan = new Range ();
 
         #region Constructors
@@ -20,21 +20,21 @@
         public Timeline (int initialCapacity)
         {
             this._events = new List<TimeEvent> (initialCapacity);
-            this._lastEventOfType = new Dictionary<U, TimeEvent> (10);
+            this._lastEventOfType = new Dictionary<TEventKey, TimeEvent> (10);
             this._filteredEvents = new List<TimeEvent> (initialCapacity / 2 + 1);
         }
 
-        public Timeline(int initialCapacity, IEqualityComparer<U> equalityComparer)
+        public Timeline(int initialCapacity, IEqualityComparer<TEventKey> equalityComparer)
         {
             this._events = new List<TimeEvent>(initialCapacity);
-            this._lastEventOfType = new Dictionary<U, TimeEvent>(10, equalityComparer);
+            this._lastEventOfType = new Dictionary<TEventKey, TimeEvent>(10, equalityComparer);
             this._filteredEvents = new List<TimeEvent>(initialCapacity / 2 + 1);
         }
         #endregion
 
         #region Add/Remove Events
 
-        public TimeEvent AddEvent (T content, U type)
+        public TimeEvent AddEvent (TEventContent content, TEventKey type)
         {
             TimeEvent tEvent = new TimeEvent (content, type, Time.time);
             this._events.Add (tEvent);
@@ -61,14 +61,14 @@
 
         public List<TimeEvent> GetAllEvents () { return this._events; }
 
-        public void GetEvents (List<TimeEvent> events, float period, bool chronologicalOrder = false, params U[] types)
+        public void GetEvents (List<TimeEvent> events, float period, bool chronologicalOrder = false, params TEventKey[] types)
         {
             events.Clear ();
             for (int i = this._events.Count - 1; i >= 0; --i)
             {
                 var tEvent = this._events[i];
 
-                if (tEvent.elapsedTime <= period)
+                if (tEvent.ElapsedTime <= period)
                 {
                     if (types.Length == 0)
                     {
@@ -90,7 +90,7 @@
                 events.Reverse ();
         }
 
-        public List<TimeEvent> GetEvents (float period, bool chronologicalOrder = false, params U[] types)
+        public List<TimeEvent> GetEvents (float period, bool chronologicalOrder = false, params TEventKey[] types)
         {
             List<TimeEvent> events = new List<TimeEvent> ();
             GetEvents (events, period, chronologicalOrder, types);
@@ -99,7 +99,7 @@
 
         protected List<TimeEvent> _filteredEvents = null;
 
-        public List<TimeEvent> GetEventsNonAlloc (float period, bool chronologicalOrder = false, params U[] types)
+        public List<TimeEvent> GetEventsNonAlloc (float period, bool chronologicalOrder = false, params TEventKey[] types)
         {
             // this._filteredEvents.Clear ();
             GetEvents (this._filteredEvents, period, chronologicalOrder, types);
@@ -110,7 +110,7 @@
 
         #region Range Compare
 
-        public void GetEventsInTimeRange (List<TimeEvent> events, float fromTimestamp, float toTimestamp, bool chronologicalOrder = false, params U[] types)
+        public void GetEventsInTimeRange (List<TimeEvent> events, float fromTimestamp, float toTimestamp, bool chronologicalOrder = false, params TEventKey[] types)
         {
             //Clear provided list
             events.Clear ();
@@ -195,13 +195,13 @@
             }
         }
 
-        public List<TimeEvent> GetEventsInTimeRangeNonAlloc (float fromTimestamp, float toTimestamp, bool chronologicalOrder = false, params U[] types)
+        public List<TimeEvent> GetEventsInTimeRangeNonAlloc (float fromTimestamp, float toTimestamp, bool chronologicalOrder = false, params TEventKey[] types)
         {
             GetEventsInTimeRange (this._filteredEvents, fromTimestamp, toTimestamp, chronologicalOrder, types);
             return this._filteredEvents;
         }
 
-        public List<TimeEvent> GetEventsInTimeRange (float fromTimestamp, float toTimestamp, bool chronologicalOrder = false, params U[] types)
+        public List<TimeEvent> GetEventsInTimeRange (float fromTimestamp, float toTimestamp, bool chronologicalOrder = false, params TEventKey[] types)
         {
             List<TimeEvent> events = new List<TimeEvent> ();
             GetEventsInTimeRange (events, fromTimestamp, toTimestamp, chronologicalOrder, types);
@@ -212,7 +212,7 @@
 
         #region Until Compare
 
-        public void GetEventsUntilInstance (List<TimeEvent> events, TimeEvent instance, bool chronologicalOrder = false, params U[] types)
+        public void GetEventsUntilInstance (List<TimeEvent> events, TimeEvent instance, bool chronologicalOrder = false, params TEventKey[] types)
         {
             events.Clear ();
 
@@ -252,14 +252,14 @@
                 events.Reverse ();
         }
 
-        public List<TimeEvent> GetEventsUntilInstance (TimeEvent instance, bool chronologicalOrder = false, params U[] types)
+        public List<TimeEvent> GetEventsUntilInstance (TimeEvent instance, bool chronologicalOrder = false, params TEventKey[] types)
         {
             List<TimeEvent> events = new List<TimeEvent> ();
             GetEventsUntilInstance (events, instance, chronologicalOrder, types);
             return events;
         }
 
-        public List<TimeEvent> GetEventsUntilInstanceNonAlloc (TimeEvent instance, bool chronologicalOrder = false, params U[] types)
+        public List<TimeEvent> GetEventsUntilInstanceNonAlloc (TimeEvent instance, bool chronologicalOrder = false, params TEventKey[] types)
         {
             GetEventsUntilInstance (this._filteredEvents, instance, chronologicalOrder, types);
             return this._filteredEvents;
@@ -269,17 +269,17 @@
 
         public class TimeEvent
         {
-            public T content = default (T);
+            public TEventContent content = default;
             public float timestamp = 0f;
-            public U type = default (U);
+            public TEventKey type = default;
 
-            public float elapsedTime
+            public float ElapsedTime
             {
                 get { return Time.time - timestamp; }
             }
 
             public TimeEvent () { }
-            public TimeEvent (T content, U type, float timestamp)
+            public TimeEvent (TEventContent content, TEventKey type, float timestamp)
             {
                 this.content = content;
                 this.type = type;

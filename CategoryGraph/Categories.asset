@@ -2267,7 +2267,7 @@ MonoBehaviour:
   m_Name: Category Set Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -2826.3372, y: -2318.935}
+  position: {x: -1273.5, y: -685.5}
   ports:
     keys: []
     values: []

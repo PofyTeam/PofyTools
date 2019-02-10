@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b907af1fb5aca41be5090ac799f617, type: 3}
+  m_Name: Universe
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 114894062186482728}
+  - {fileID: 114992088971036838}
+  - {fileID: 114154681610683890}
+  - {fileID: 114736909087577246}
+  - {fileID: 114105085757502486}
+  - {fileID: 114932202424407726}
+--- !u!114 &114105085757502486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3354abfd72988564083ef531bff380a1, type: 3}
+  m_Name: World Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 472, y: -520}
+  ports:
+    keys: []
+    values: []
+  size: 1
+  endYear: 0
+  originEvent: 0
+--- !u!114 &114154681610683890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3354abfd72988564083ef531bff380a1, type: 3}
+  m_Name: World Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 472, y: -328}
+  ports:
+    keys: []
+    values: []
+  size: 1
+  endYear: 0
+  originEvent: 0
+--- !u!114 &114736909087577246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3354abfd72988564083ef531bff380a1, type: 3}
+  m_Name: World Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 472, y: -456}
+  ports:
+    keys: []
+    values: []
+  size: 1
+  endYear: 0
+  originEvent: 0
+--- !u!114 &114894062186482728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3354abfd72988564083ef531bff380a1, type: 3}
+  m_Name: Alpha Kyro
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 472, y: -200}
+  ports:
+    keys: []
+    values: []
+  size: 100
+  endYear: 0
+  originEvent: 0
+--- !u!114 &114932202424407726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3354abfd72988564083ef531bff380a1, type: 3}
+  m_Name: World Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 472, y: -392}
+  ports:
+    keys: []
+    values: []
+  size: 1
+  endYear: 0
+  originEvent: 0
+--- !u!114 &114992088971036838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3354abfd72988564083ef531bff380a1, type: 3}
+  m_Name: Beta Kyro
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 472, y: -264}
+  ports:
+    keys: []
+    values: []
+  size: 32
+  endYear: 0
+  originEvent: 0

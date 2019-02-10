@@ -181,7 +181,7 @@ namespace Extensions
     {
         public static LayerMask AddLayerToMask(this LayerMask mask, params int[] layer)
         {
-            for (int i = 0;i < layer.Length;i++)
+            for (int i = 0; i < layer.Length; i++)
             {
                 mask = 1 << layer[i] | mask;
             }
@@ -284,7 +284,7 @@ namespace Extensions
         public static bool Is<T>(this System.Enum type, params T[] value)
         {
             var thisType = (int)(object)type;
-            for (int i = 0;i < value.Length;i++)
+            for (int i = 0; i < value.Length; i++)
             {
                 if (thisType == (int)(object)value[i])
                     return true;
@@ -361,7 +361,7 @@ namespace Extensions
         public static void ClearChildren(this Transform transform)
         {
             Transform child = null;
-            for (int i = transform.childCount - 1;i >= 0;--i)
+            for (int i = transform.childCount - 1; i >= 0; --i)
             {
                 child = transform.GetChild(i);
 #if UNITY_EDITOR
@@ -430,7 +430,7 @@ namespace Extensions
         {
             var numberOfSteps = 0;
             var stepSum = 0f;
-            for (float i = 0;i <= 1;i += step)
+            for (float i = 0; i <= 1; i += step)
             {
                 stepSum += curve.Evaluate(i);
                 numberOfSteps++;
@@ -551,13 +551,20 @@ namespace Extensions
         //}
 
     }
-    static class RandomExtensions
+    public static class RandomExtensions
     {
         public static long RandomLong(this System.Random rnd)
         {
             byte[] buffer = new byte[8];
             rnd.NextBytes(buffer);
             return System.BitConverter.ToInt64(buffer, 0);
+        }
+
+        public static ulong RandomULong(this System.Random rnd)
+        {
+            byte[] buffer = new byte[8];
+            rnd.NextBytes(buffer);
+            return System.BitConverter.ToUInt64(buffer, 0);
         }
     }
 }
