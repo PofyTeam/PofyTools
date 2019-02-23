@@ -135,7 +135,7 @@ namespace PofyTools
             this[0].transform.localRotation = Quaternion.Euler(Vector3.forward * Random.Range(-30, 30));
             this[0].transform.Translate(this[0].speed * Vector3.up, Space.Self);
             //this.countMultiplier = this[0].Pool.Count * 0.33f;
-
+            base.EnterState();
         }
 
         public override bool UpdateState()
@@ -155,6 +155,7 @@ namespace PofyTools
         public override void ExitState()
         {
             this[0].Free();
+            base.ExitState();
         }
 
     }

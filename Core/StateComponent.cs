@@ -23,24 +23,22 @@ namespace PofyTools
 
         #region IState
 
-        [SerializeField]
-        protected bool _hasUpdate;
+        [SerializeField]        protected bool _hasUpdate;
         public bool HasUpdate { get { return this._hasUpdate; } }
 
-        [SerializeField]
-        protected bool _isPermanent;
+        [SerializeField]        protected bool _isPermanent;
         public bool IsPermanent { get { return this._isPermanent; } }
 
-        [SerializeField]
-        protected int _priority;
+        [SerializeField]        protected int _priority;
         public int Priority { get { return this._priority; } }
 
-        [SerializeField]
-        protected bool _isActive;
+        [SerializeField] protected bool _ignoreStacking;
+        public bool IgnoreStacking { get { return this._ignoreStacking; } }
+
+        [SerializeField]        protected bool _isActive;
         public bool IsActive { get { return this._isActive; } }
 
-        [SerializeField]
-        protected bool _isInitialized;
+        [SerializeField]        protected bool _isInitialized;
         public bool IsInitialized { get { return this._isInitialized; } }
 
         public void InitializeState(StateableActor actor)

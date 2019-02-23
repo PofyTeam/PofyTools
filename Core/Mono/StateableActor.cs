@@ -6,16 +6,15 @@ namespace PofyTools
 
     public abstract class StateableActor : MonoBehaviour, IStateable, ISubscribable, IInitializable, ITransformable
     {
+
+        #region Variables
+
 #if UNITY_EDITOR
 
         private List<string> _stateList = new List<string>();
 #endif
 
-        #region Variables
-
-        //public bool removeAllStatesOnStart = true;
-
-        protected List<IState> _stateStack;
+        private List<IState> _stateStack;
 
         #endregion
 
@@ -46,9 +45,14 @@ namespace PofyTools
 
         protected bool _hasLateInitialize = false;
 
-        public virtual void LateInitialize()
+        public virtual bool LateInitialize()
         {
-            this._isInitialized = true;
+            if (!this.IsInitialized)
+            {
+                this._isInitialized = true;
+                return true;
+            }
+            return false;
         }
 
         #endregion
@@ -86,70 +90,78 @@ namespace PofyTools
 
         }
 
-        protected virtual void OnDestroy()
-        {
-            PurgeStateStack();
-            Unsubscribe();
-        }
-
         #endregion
 
         #region IStateable
-
+        private bool _sort = false;
         public void AddState(IState state)
         {
             if (state == null)
             {
                 if (this._stateStack.Count == 0)
                 {
-                    this.enabled = false;
-                    Debug.LogError("<size=24> " + this.name + ": Disabled for adding a null state object!</size>");
+                    //this.enabled = false;
+                    Debug.LogError("<size=24> " + this.name + ": Trying to add a NULL State Object!</size>");
                 }
                 return;
             }
 
-            if (!this._stateStack.Contains(state))
+            if (!state.IgnoreStacking)
+                RemoveState(state);
+
+            else if (this._stateStack.Contains(state))
             {
-                state.EnterState();
-                if (state.HasUpdate)
-                {
-                    this._stateStack.Add(state);
-                    this._stateStack.Sort((x, y) => x.Priority.CompareTo(y.Priority));
-                    this.enabled = true;
-                }
-                else
-                    state.ExitState();
+                //Debug.LogWarning(this.name + ": State already active! Ignoring...");
+                return;
             }
+
+            state.EnterState();
+
+            if (state.HasUpdate)
+            {
+                this._stateStack.Add(state);
+                //this._stateStack.Sort((x, y) => x.Priority.CompareTo(y.Priority));
+                this._sort = true;
+                //this.enabled = true;
+            }
+            else
+                state.ExitState();
         }
 
         public void RemoveState(IState state)
         {
-            if (this._stateStack.Remove(state))
+            if (state == null)
+            {
+                Debug.LogError("<size=24> " + this.name + ": Trying to add a NULL State Object!</size>");
+                return;
+            }
+
+            if (!state.IsActive)
+            {
+                //Debug.LogWarningFormat("{0}: State {1} inactive!", this.name, state.GetType().ToString());
+                return;
+            }
+
+            state.Deactivate();
+            if (this._stateStack.Contains(state))
             {
                 state.ExitState();
             }
-
-            if (this._stateStack.Count == 0)
-                this.enabled = false;
         }
 
         public void RemoveAllStates(bool endPermanent = false, int priority = 0)
         {
-
-            if (this._stateStack != null)
+            int count = this._stateStack.Count;
+            IState state = null;
+            for (int i = count - 1; i >= 0; --i)
             {
-                int count = this._stateStack.Count;
-                IState state = null;
-                for (int i = count - 1;i >= 0;--i)
+                state = this._stateStack[i];
+                if (state.IsActive && (!state.IsPermanent || endPermanent))
                 {
-                    state = this._stateStack[i];
-                    if (!state.IsPermanent || endPermanent)
+                    if (state.Priority >= priority)
                     {
-                        if (state.Priority >= priority)
-                        {
-                            this._stateStack.RemoveAt(i);
-                            state.ExitState();
-                        }
+                        //this._stateStack.RemoveAt(i);
+                        state.ExitState();
                     }
                 }
             }
@@ -157,23 +169,21 @@ namespace PofyTools
 
         public void PurgeStateStack()
         {
-            if (this._stateStack != null)
+            foreach (var state in this._stateStack)
             {
-                foreach (var state in this._stateStack)
-                {
-                    state.Deactivate();
-                }
-                this._stateStack.Clear();
+                state.Deactivate();
             }
-            this.enabled = false;
+
+            this._stateStack.Clear();
         }
 
-        public void SetToState(IState state)
-        {
-            RemoveAllStates();
-            if (state != null)
-                AddState(state);
-        }
+        //public void SetToState(IState state)
+        //{
+        //    RemoveAllStates();
+        //    if (state != null)
+        //        AddState(state);
+        //}
+
 
         #endregion
 
@@ -189,9 +199,6 @@ namespace PofyTools
         {
             LateInitialize();
             Subscribe();
-
-            //if (this.removeAllStatesOnStart)
-            //    PurgeStateStack();
         }
 
         // Update is called once per frame
@@ -203,20 +210,19 @@ namespace PofyTools
             this._stateList.Clear();
             foreach (var logstate in this._stateStack)
             {
-                this._stateList.Add(logstate.ToString());
+                this._stateList.Add(logstate.ToString() + ":" + logstate.IsActive);
             }
 #endif
 
             IState state = null;
 
-            for (int i = this._stateStack.Count - 1;i >= 0 && i < this._stateStack.Count;--i)
+            for (int i = this._stateStack.Count - 1; i >= 0 && i < this._stateStack.Count; --i)
             {
 
                 state = this._stateStack[i];
 
-                if (state.UpdateState())
+                if (state.IsActive && state.UpdateState())
                 {
-                    this._stateStack.RemoveAt(i);
                     state.ExitState();
                 }
             }
@@ -226,13 +232,13 @@ namespace PofyTools
         {
             IState state = null;
 
-            for (int i = this._stateStack.Count - 1;i >= 0 && i < this._stateStack.Count;--i)
+            for (int i = this._stateStack.Count - 1; i >= 0 && i < this._stateStack.Count; --i)
             {
                 state = this._stateStack[i];
 
-                if (state.FixedUpdateState())
+                if (state.IsActive && state.FixedUpdateState())
                 {
-                    this._stateStack.RemoveAt(i);
+                    //this._stateStack.RemoveAt(i);
                     state.ExitState();
 
                 }
@@ -243,16 +249,35 @@ namespace PofyTools
         {
             IState state = null;
 
-            for (int i = this._stateStack.Count - 1;i >= 0 && i < this._stateStack.Count;--i)
+            for (int i = this._stateStack.Count - 1; i >= 0 && i < this._stateStack.Count; --i)
             {
                 state = this._stateStack[i];
 
-                if (state.LateUpdateState())
+                if (state.IsActive && state.LateUpdateState())
                 {
-                    this._stateStack.RemoveAt(i);
+                    //this._stateStack.RemoveAt(i);
                     state.ExitState();
                 }
             }
+
+            RemoveInactiveStates();
+        }
+
+        private void RemoveInactiveStates()
+        {
+            var removal = this._stateStack.RemoveAll(x => !x.IsActive) > 0;
+            if (this._sort)
+            {
+                this._stateStack.Sort((x, y) => x.Priority.CompareTo(y.Priority));
+                this._sort = false;
+            }
+
+        }
+
+        protected virtual void OnDestroy()
+        {
+            PurgeStateStack();
+            Unsubscribe();
         }
 
         #endregion
@@ -276,9 +301,9 @@ namespace PofyTools
             set { this._stateStack[index] = value; }
         }
 
-        public bool Contains(IState item) { return this._stateStack.Contains(item); }
-        public int Count { get { return this._stateStack.Count; } }
-        public IEnumerator<IState> GetEnumerator() { return this._stateStack.GetEnumerator(); }
+        //public bool Contains(IState item) { return this._stateStack.Contains(item); }
+        //public int Count { get { return this._stateStack.Count; } }
+        //public IEnumerator<IState> GetEnumerator() { return this._stateStack.GetEnumerator(); }
 
         #endregion
     }
@@ -541,7 +566,7 @@ namespace PofyTools
 
         int Priority { get; }
 
-        //bool IgnoreStacking { get; }
+        bool IgnoreStacking { get; }
 
         bool IsActive
         {
@@ -609,7 +634,7 @@ namespace PofyTools
             {
                 int count = this._stateStack.Count;
                 IState state = null;
-                for (int i = count - 1;i >= 0;--i)
+                for (int i = count - 1; i >= 0; --i)
                 {
                     state = this._stateStack[i];
                     if (!state.IsPermanent || endPermanent)
@@ -651,7 +676,7 @@ namespace PofyTools
         {
             IState state = null;
 
-            for (int i = this._stateStack.Count - 1;i >= 0 && i < this._stateStack.Count;--i)
+            for (int i = this._stateStack.Count - 1; i >= 0 && i < this._stateStack.Count; --i)
             {
 
                 state = this._stateStack[i];
@@ -668,7 +693,7 @@ namespace PofyTools
         {
             IState state = null;
 
-            for (int i = this._stateStack.Count - 1;i >= 0 && i < this._stateStack.Count;--i)
+            for (int i = this._stateStack.Count - 1; i >= 0 && i < this._stateStack.Count; --i)
             {
                 state = this._stateStack[i];
 
@@ -685,7 +710,7 @@ namespace PofyTools
         {
             IState state = null;
 
-            for (int i = this._stateStack.Count - 1;i >= 0 && i < this._stateStack.Count;--i)
+            for (int i = this._stateStack.Count - 1; i >= 0 && i < this._stateStack.Count; --i)
             {
                 state = this._stateStack[i];
 

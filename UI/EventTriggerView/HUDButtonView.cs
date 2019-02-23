@@ -101,6 +101,7 @@
 
             this._startFactor = this[0].visual.localScale[0];
             this._targetFactor = (this.scaleIn) ? this[0].minScale : this[0].maxScale;
+            base.EnterState();
         }
 
         public override bool UpdateState()
@@ -146,6 +147,7 @@
         {
             this._timer = this.duration;
             this[0].visual.localScale = Vector3.one;
+            base.EnterState();
         }
 
         public override bool UpdateState()
@@ -165,6 +167,7 @@
         public override void ExitState()
         {
             this[0].visual.localScale = Vector3.one;
+            base.ExitState();
         }
     }
 }

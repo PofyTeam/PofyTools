@@ -299,6 +299,16 @@
         //}
 
         #endregion
+
+        public override string ToString()
+        {
+            string result = "";
+            foreach (var id in this._content)
+            {
+                result += id.ToString() + "\n";
+            }
+            return result;
+        }
     }
     /// <summary>
     /// Collection of keyable values obtainable via key or index.
@@ -494,6 +504,10 @@
         [System.NonSerialized]
         public int hash;
 
+        public override string ToString()
+        {
+            return id;
+        }
     }
 
     public class DefinableData<T> : Data<string>, IDefinable<T> where T : Definition

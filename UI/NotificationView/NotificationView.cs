@@ -297,6 +297,7 @@
             this[0].state = NotificationView.State.Active;
             this._duration = this[0].duration;
             this._timer = this._duration;
+            base.EnterState();
         }
 
         public override bool UpdateState()
@@ -320,6 +321,7 @@
         public override void ExitState()
         {
             this[0].FadeOut(0.5f);
+            base.EnterState();
         }
     }
 

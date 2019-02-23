@@ -147,7 +147,7 @@
         //No whitespaces
         private void OnValidate()
         {
-            this.id = this.id.Trim();
+            this.id = (string.IsNullOrEmpty(this.id)) ? this.id : this.id.Trim();
         }
     }
 
