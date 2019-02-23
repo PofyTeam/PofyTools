@@ -96,6 +96,7 @@ namespace PofyTools
         private bool _sort = false;
         public void AddState(IState state)
         {
+            bool resetDone = false;
             if (state == null)
             {
                 if (this._stateStack.Count == 0)
@@ -106,23 +107,29 @@ namespace PofyTools
                 return;
             }
 
-            if (!state.IgnoreStacking)
-                RemoveState(state);
-
-            else if (this._stateStack.Contains(state))
+            if (this._stateStack.Contains(state))
             {
                 //Debug.LogWarning(this.name + ": State already active! Ignoring...");
-                return;
+                if (state.RequiresReactivation)
+                {
+                    RemoveState(state);
+                    resetDone = true;
+                }
+                else
+                    return;
             }
 
             state.EnterState();
 
             if (state.HasUpdate)
             {
-                this._stateStack.Add(state);
-                //this._stateStack.Sort((x, y) => x.Priority.CompareTo(y.Priority));
-                this._sort = true;
-                //this.enabled = true;
+                if (!resetDone)
+                {
+                    this._stateStack.Add(state);
+                    //this._stateStack.Sort((x, y) => x.Priority.CompareTo(y.Priority));
+                    this._sort = true;
+                    //this.enabled = true;
+                }
             }
             else
                 state.ExitState();
@@ -339,7 +346,7 @@ namespace PofyTools
             this.IsActive = false;
         }
 
-        public bool IgnoreStacking
+        public bool RequiresReactivation
         {
             get;
             protected set;
@@ -566,7 +573,7 @@ namespace PofyTools
 
         int Priority { get; }
 
-        bool IgnoreStacking { get; }
+        bool RequiresReactivation { get; }
 
         bool IsActive
         {

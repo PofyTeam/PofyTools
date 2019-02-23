@@ -33,7 +33,7 @@ namespace PofyTools
         public int Priority { get { return this._priority; } }
 
         [SerializeField] protected bool _ignoreStacking;
-        public bool IgnoreStacking { get { return this._ignoreStacking; } }
+        public bool RequiresReactivation { get { return this._ignoreStacking; } }
 
         [SerializeField]        protected bool _isActive;
         public bool IsActive { get { return this._isActive; } }
