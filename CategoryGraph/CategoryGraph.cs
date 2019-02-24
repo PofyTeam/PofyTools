@@ -20,7 +20,9 @@ namespace PofyTools
         {
             if(this._setNode!=null)
             (this._setNode as CategorySetNode).Save();
+#if UNITY_EDITOR
             AssetDatabase.SaveAssets();
+#endif
         }
 
         /// <summary> Add a node to the graph by type </summary>

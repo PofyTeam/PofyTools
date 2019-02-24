@@ -1,8 +1,6 @@
 ﻿using UnityEditor;
 using UnityEngine;
 using XNode;
-using System.IO;
-using System;
 
 namespace PofyTools
 {
@@ -65,15 +63,19 @@ namespace PofyTools
             set.SetContent(content);
             //set.Save();
             //var fullPath = EditorUtility.SaveFilePanel("Save Category Definition Set", Application.dataPath, this.FILE_NAME, this.FILE_EXTENSION);
-            DataUtility.PanelSave(_lastPath, set);
+            DataUtility.PanelSave(this._lastPath, set);
+#if UNITY_EDITOR
             AssetDatabase.SaveAssets();
+#endif
         }
 
         [ContextMenu("Save as...")]
         public void SaveAs()
         {
+#if UNITY_EDITOR
             this._lastPath = EditorUtility.SaveFilePanel("Save Category Definition Set", Application.dataPath, this.FILE_NAME, this.FILE_EXTENSION);
             Save();
+#endif
         }
     }
 }

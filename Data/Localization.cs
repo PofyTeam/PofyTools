@@ -1,6 +1,5 @@
 ﻿namespace PofyTools
 {
-    using System.Collections;
     using System.Collections.Generic;
     using System.IO;
 
@@ -37,15 +36,15 @@
 
         #region Variables
 
-        public const string TAG = "<color=green><b>LOCALIZATION:</b></color> ";
+        public const string TAG = "<b>Localization: </b>";
 
         private static LocalizationData _Loaded = null;
-        private static Dictionary <string, LanguageData> _Languages = null;
-        private static Dictionary <string,string> _Strings = null;
+        private static Dictionary<string, LanguageData> _Languages = null;
+        private static Dictionary<string, string> _Strings = null;
 
-        public static Dictionary<string,string> Strings
+        public static Dictionary<string, string> Strings
         {
-            get{ return _Strings; }
+            get { return _Strings; }
         }
 
         private static bool _Initialized = false;
@@ -70,7 +69,7 @@
         /// </summary>
         public static void Clear()
         {
-        
+
             _Loaded = new LocalizationData();
             _Languages = new Dictionary<string, LanguageData>();
             _Strings = new Dictionary<string, string>();
@@ -85,8 +84,8 @@
         {
             if (File.Exists("Assets/Resources/Definitions/localization_data.json"))
             {
-//                var json = JsonUtility.ToJson(_Loaded, false);
-//                System.IO.File.WriteAllText("Assets/Resources/Definitions/localization_data.json", json);
+                //                var json = JsonUtility.ToJson(_Loaded, false);
+                //                System.IO.File.WriteAllText("Assets/Resources/Definitions/localization_data.json", json);
                 var _data = Resources.Load<TextAsset>("Definitions/localization_data").text;
                 //Debug.LogError(TAG + "\n" + _data);
                 JsonUtility.FromJsonOverwrite(_data, _Loaded);
@@ -248,7 +247,7 @@
         {
             if (_Loaded == null)
                 LoadData();
-        
+
             return _Loaded.data;
         }
 
@@ -344,12 +343,12 @@
         /// <param name="key">Key.</param>
         public static bool HasKey(string key)
         {
-        
+
             var allData = GetData();
             if (allData.Count > 0)
                 return allData[0].keys.Contains(key);
             return false;
-            
+
         }
 
         /// <summary>
@@ -373,17 +372,17 @@
         //TODO
         public static void ExcelToJson()
         {
-//        FileStream streamer = File.Open("Assets\\Resources\\Definitions\\localization_data.xlsx", FileMode.Open, FileAccess.Read);
-//
-//        IExcelDataReader excelReader = ExcelReaderFactory.CreateBinaryReader(streamer);
-//
-//        DataSet result = excelReader.AsDataSet();
-//        while (excelReader.Read())
-////        {
-//            Debug.Log(excelReader.GetString(0));
-////        }
-//
-//        excelReader.Close();
+            //        FileStream streamer = File.Open("Assets\\Resources\\Definitions\\localization_data.xlsx", FileMode.Open, FileAccess.Read);
+            //
+            //        IExcelDataReader excelReader = ExcelReaderFactory.CreateBinaryReader(streamer);
+            //
+            //        DataSet result = excelReader.AsDataSet();
+            //        while (excelReader.Read())
+            ////        {
+            //            Debug.Log(excelReader.GetString(0));
+            ////        }
+            //
+            //        excelReader.Close();
         }
 
         /// <summary>
@@ -392,7 +391,7 @@
         /// <value><c>true</c> if is initialized; otherwise, <c>false</c>.</value>
         public static bool IsInitialized
         {
-            get{ return _Initialized; }
+            get { return _Initialized; }
         }
 
         #endregion
