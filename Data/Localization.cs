@@ -82,14 +82,12 @@
         /// </summary>
         private static void LoadData()
         {
-            if (File.Exists("Assets/Resources/Definitions/localization_data.json"))
-            {
-                //                var json = JsonUtility.ToJson(_Loaded, false);
-                //                System.IO.File.WriteAllText("Assets/Resources/Definitions/localization_data.json", json);
-                var _data = Resources.Load<TextAsset>("Definitions/localization_data").text;
-                //Debug.LogError(TAG + "\n" + _data);
-                JsonUtility.FromJsonOverwrite(_data, _Loaded);
 
+            var _data = Resources.Load<TextAsset>("Definitions/localization_data");
+
+            if (_data != null)
+            {
+                JsonUtility.FromJsonOverwrite(_data.text, _Loaded);
 
                 _Languages.Clear();
                 foreach (var langData in _Loaded.data)
