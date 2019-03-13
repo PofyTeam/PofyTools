@@ -506,7 +506,7 @@
 
         public override string ToString()
         {
-            return id;
+            return this.id;
         }
     }
 
@@ -688,7 +688,7 @@
             json = (encode) ? DataUtility.EncodeTo64(json) : json;
             json = (scramble) ? DataUtility.Scramble(json) : json;
 
-            File.WriteAllText(fullPath + "/" + filename + "." + extension, json);
+            File.WriteAllText(fullPath + "/" + filename + ((string.IsNullOrEmpty(extension)) ? "" : ("." + extension)), json);
 
             result = result.Add(SaveResult.Done);
             Debug.LogFormat("{0}File \"{1}\" saved successfully!", TAG, fullPath + "/" + filename + "." + extension);
