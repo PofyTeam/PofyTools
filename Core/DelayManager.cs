@@ -2,7 +2,7 @@
 {
     public class DelayManager
     {
-        public const int ELEMENT_LIMIT = 64;
+        public const int ELEMENT_LIMIT = 128;
         private static DelayManager _instance = null;
         public static DelayManager Instance
         {
@@ -26,6 +26,12 @@
             return Instance.AddElement(method, delay, instance);
         }
 
+        public static void StopAt(int index)
+        {
+            if (index >= 0)
+                _instance._elements[index] = default;
+        }
+
         public static void Tick(float deltaTime)
         {
             Instance.Update(deltaTime);
@@ -37,6 +43,7 @@
             public object instance;
             public float duration;
             public VoidDelegate callback;
+            public bool IsActive { get; set; }
 
             public bool Update(float deltaTime)
             {
@@ -59,6 +66,7 @@
                         callback = method
                     };
 
+                    desc.IsActive = true;
                     this._elements[i] = desc;
                     return i;
                 }
