@@ -24,7 +24,7 @@ namespace PofyTools
             float playerDistanceSqr = (this._rectTransform.position - data.playerPosition).sqrMagnitude;
             float cameraDistanceSqr = (this._rectTransform.position - data.cameraPosition).sqrMagnitude;
 
-            this._canvasGroup.alpha = (1 - GameManager.Data.wsuiData.fadeDistanceSqrRange.Percentage(playerDistanceSqr)) * GameManager.Data.wsuiData.fadeNearClipRange.Percentage(cameraDistanceSqr);
+            this._canvasGroup.alpha = (1 - WSUIManager.Instance.Data.fadeDistanceSqrRange.Percentage(playerDistanceSqr)) * WSUIManager.Instance.Data.fadeNearClipRange.Percentage(cameraDistanceSqr);
 
             return false;
         }
@@ -32,7 +32,7 @@ namespace PofyTools
         #endregion
 
         #region IPoolable
-        protected WSUIManager.PoolData _data;
+        protected WSUIManager.PoolData _poolData;
         public bool IsActive { get; protected set; }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace PofyTools
         /// <param name="data"></param>
         public void SetPoolData(WSUIManager.PoolData data)
         {
-            this._data = data;
+            this._poolData = data;
         }
 
         /// <summary>
@@ -55,8 +55,8 @@ namespace PofyTools
                 this.IsActive = true;
 
                 //Add to manager's update stack
-                if (this._data.manager != null)
-                    this._data.manager.AddElement(this);
+                if (this._poolData.manager != null)
+                    this._poolData.manager.AddElement(this);
                 else
                     Debug.LogError("Element has no manager!");
             }
@@ -87,7 +87,7 @@ namespace PofyTools
 
             this.gameObject.SetActive(false);
 
-            WSUIManager.PushOrDestroy(this, this._data.stack, !this._data.poolable ? WSUIManager.PushResult.Destroyed : WSUIManager.PushResult.None); //this._data.stack.Push(this);
+            WSUIManager.PushOrDestroy(this, this._poolData.stack, !this._poolData.poolable ? WSUIManager.PushResult.Destroyed : WSUIManager.PushResult.None); //this._data.stack.Push(this);
         }
 
         #endregion

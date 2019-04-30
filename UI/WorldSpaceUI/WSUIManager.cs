@@ -7,17 +7,18 @@ namespace PofyTools
     {
         public const string TAG = "<b>WorldSpaceUIManager :</b>";
         public static WSUIManager Instance;
-
+        public WSUIData Data { get; private set; }
         #region IInitializable implementation
 
         private bool _isInitialized = false;
         public bool IsInitialized => this._isInitialized;
         private Transform _character, _camera;
 
-        public bool Initialize(Transform character, Transform camera)
+        public bool Initialize(Transform character, Transform camera, WSUIData data)
         {
             this._character = character;
             this._camera = camera;
+            this.Data = data;
 
             return Initialize();
         }
@@ -77,9 +78,9 @@ namespace PofyTools
             var data = new UpdateData()
             {
                 deltaTime = delatTime,
-                playerPosition = _character.position,
-                cameraPosition = _camera.position,
-                cameraUp = _camera.up,
+                playerPosition = this._character.position,
+                cameraPosition = this._camera.position,
+                cameraUp = this._camera.up,
             };
 
 #if UNITY_EDITOR
@@ -95,7 +96,7 @@ namespace PofyTools
             if (Input.GetKeyDown(KeyCode.I))
             {
                 var newElement = ObtainFollowImage() as WSUIFollow;
-                newElement.followTarget = _character;
+                newElement.followTarget = this._character;
                 newElement.followOffset = new Vector3(0f, 2.5f, 0f);
 
                 newElement.Activate();
@@ -207,7 +208,7 @@ namespace PofyTools
         {
             if (stack == null) forcedResult = PushResult.Destroyed;
 
-            if (forcedResult == PushResult.Destroyed || (forcedResult != PushResult.Success && stack.Count >= GameManager.Data.wsuiData.stackLimit))
+            if (forcedResult == PushResult.Destroyed || (forcedResult != PushResult.Success && stack.Count >= WSUIManager.Instance.Data.stackLimit))
             {
                 GameObject.Destroy(instance.gameObject);
                 return PushResult.Destroyed;
@@ -222,44 +223,63 @@ namespace PofyTools
         /// Use instance.Activate to activate it.
         /// </summary>
         /// <returns></returns>
-        public static WSUIBase ObtainPositionText() => PopOrRegister(typeof(WSUIPositionText), GameManager.Data.wsuiData.positionTextPrefab);
+        public static WSUIBase ObtainPositionText() => PopOrRegister(typeof(WSUIPositionText), Instance.Data.positionTextPrefab);
         /// <summary>
         /// Obtained Instance is not automatically added to active elements.
         /// Use instance.Activate to activate it.
         /// </summary>
         /// <returns></returns>
-        public static WSUIBase ObtainFollowText() => PopOrRegister(typeof(WSUIFollowText), GameManager.Data.wsuiData.followTextPrefab);
+        public static WSUIBase ObtainFollowText() => PopOrRegister(typeof(WSUIFollowText), Instance.Data.followTextPrefab);
         /// <summary>
         /// Obtained Instance is not automatically added to active elements.
         /// Use instance.Activate to activate it.
         /// </summary>
         /// <returns></returns>
-        public static WSUIBase ObtainPositionImage() => PopOrRegister(typeof(WSUIPositionImage), GameManager.Data.wsuiData.positionImagePrefab);
+        public static WSUIBase ObtainPositionImage() => PopOrRegister(typeof(WSUIPositionImage), Instance.Data.positionImagePrefab);
         /// <summary>
         /// Obtained Instance is not automatically added to active elements.
         /// Use instance.Activate to activate it.
         /// </summary>
         /// <returns></returns>
-        public static WSUIBase ObtainFollowImage() => PopOrRegister(typeof(WSUIFollowImage), GameManager.Data.wsuiData.followImagePrefab);
+        public static WSUIBase ObtainFollowImage() => PopOrRegister(typeof(WSUIFollowImage), Instance.Data.followImagePrefab);
         /// <summary>
         /// Obtained Instance is not automatically added to active elements.
         /// Use instance.Activate to activate it.
         /// </summary>
         /// <returns></returns>
-        public static WSUIBase ObtainPopup() => PopOrRegister(typeof(WSUIPopup), GameManager.Data.wsuiData.popupPrefab);
+        public static WSUIBase ObtainPopup() => PopOrRegister(typeof(WSUIPopup), Instance.Data.popupPrefab);
         /// <summary>
         /// Obtained Instance is not automatically added to active elements.
         /// Use instance.Activate to activate it.
         /// </summary>
         /// <returns></returns>
-        public static WSUIBase ObtainActionMessage() => PopOrRegister(typeof(UIActionMessage), GameManager.Data.wsuiData.uiActionMessagePrefab);
-        /// <summary>
-        /// Obtained Instance is not automatically added to active elements.
-        /// Use instance.Activate to activate it.
-        /// </summary>
-        /// <returns></returns>
-        public static WSUIBase ObtainBar() => PopOrRegister(typeof(WSUIBar), GameManager.Data.wsuiData.barPrefab);
+        public static WSUIBase ObtainBar() => PopOrRegister(typeof(WSUIBar), Instance.Data.barPrefab);
 
         #endregion
+
+        [System.Serializable]
+        public class WSUIData
+        {
+            [Header("Distance Fade")]
+            public Range fadeDistanceSqrRange = new Range(100f, 600f);
+            public Range fadeNearClipRange = new Range(1f, 4f);
+            [Space]
+            [Header("Pool")]
+            //Pool stack
+            public int stackLimit = 20;
+            public int stackPrewarmSize = 5;
+            [Space]
+            //Pool prefabs
+            [Header("Text")]
+            public WSUIPositionText positionTextPrefab;
+            public WSUIFollowText followTextPrefab;
+            public WSUIPopup popupPrefab;
+
+            [Header("Image")]
+            public WSUIPositionImage positionImagePrefab;
+            public WSUIFollowImage followImagePrefab;
+            [Header("Bar")]
+            public WSUIBar barPrefab;
+        }
     }
 }

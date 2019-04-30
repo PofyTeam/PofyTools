@@ -9,9 +9,8 @@ namespace PofyTools
         public AnimationCurve alphaCurve;
 
         public float speed = 1;
-        public float duration = 1;
         private float _timer = 0;
-
+        private Data _data;
         #region Managable Element
 
         public override bool UpdateElement(WSUIManager.UpdateData data)
@@ -46,20 +45,43 @@ namespace PofyTools
             if (!this.IsActive)
             {
                 //custom
-                this._timer = this.duration;
+                this._timer = this._data.duration;
                 base.Activate();
             }
         }
 
-        public void SetMessageData(ResourceManager.WorldSpaceInfoData data)
+        public void SetMessageData(Data data)
         {
+            this._data = data;
             this.message.text = data.message;
             this.message.color = data.color;
-            this.duration = data.duration;
+            this._data.duration = data.duration;
             this._rectTransform.position = data.position;
         }
 
         #endregion
+        public struct Data
+        {
+            public string message;
+            public Vector3 position;
+            public float duration;
+            public Color color;
 
+            public Data(string message, Vector3 position, float duration, int size, Color color)
+            {
+                this.message = message;
+                this.position = position;
+                this.duration = duration;
+                this.color = color;
+            }
+
+            public void SetData(string message, Vector3 position, float duration, int size, Color color)
+            {
+                this.message = message;
+                this.position = position;
+                this.duration = duration;
+                this.color = color;
+            }
+        }
     }
 }
