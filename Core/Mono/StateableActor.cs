@@ -115,8 +115,10 @@ namespace PofyTools
                     RemoveState(state);
                     resetDone = true;
                 }
-                else
+                else if (state.IsActive)
+                {
                     return;
+                }
             }
 
             state.EnterState();
@@ -126,9 +128,7 @@ namespace PofyTools
                 if (!resetDone)
                 {
                     this._stateStack.Add(state);
-                    //this._stateStack.Sort((x, y) => x.Priority.CompareTo(y.Priority));
                     this._sort = true;
-                    //this.enabled = true;
                 }
             }
             else
