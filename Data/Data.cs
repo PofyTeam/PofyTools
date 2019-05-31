@@ -337,10 +337,15 @@
             return true;
         }
 
-        public virtual void AddContent(TValue data)
+        public virtual bool AddContent(TValue data)
         {
             if (this._content.AddOnce(data))
+            {
                 this.content[data.id] = data;
+                return true;
+            }
+
+            return false;
         }
 
         public override bool RemoveContent(TValue data)
