@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: resource_stamina
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -168, y: -1480}
+  position: {x: -200, y: -1368}
   ports:
     keys:
     - baseCategories
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Name: health_potion
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 360, y: -2088}
+  position: {x: 328, y: -1976}
   ports:
     keys:
     - baseCategories
@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Name: consumable
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -568, y: -1848}
+  position: {x: -600, y: -1736}
   ports:
     keys:
     - baseCategories
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Name: boots
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -88, y: -2728}
+  position: {x: -88, y: -2744}
   ports:
     keys:
     - baseCategories
@@ -576,7 +576,7 @@ MonoBehaviour:
   m_Name: weapon
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -440, y: -2248}
+  position: {x: -472, y: -2136}
   ports:
     keys:
     - baseCategories
@@ -628,7 +628,7 @@ MonoBehaviour:
   m_Name: focus_potion
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 360, y: -1832}
+  position: {x: 328, y: -1720}
   ports:
     keys:
     - baseCategories
@@ -671,7 +671,7 @@ MonoBehaviour:
   m_Name: headgear
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -440, y: -2504}
+  position: {x: -472, y: -2392}
   ports:
     keys:
     - baseCategories
@@ -714,7 +714,7 @@ MonoBehaviour:
   m_Name: ability
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 632, y: -2248}
+  position: {x: 600, y: -2136}
   ports:
     keys:
     - baseCategories
@@ -840,7 +840,7 @@ MonoBehaviour:
   m_Name: resource_focus
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -168, y: -1368}
+  position: {x: -200, y: -1256}
   ports:
     keys:
     - baseCategories
@@ -972,7 +972,7 @@ MonoBehaviour:
   m_Name: footwear
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -440, y: -2616}
+  position: {x: -472, y: -2504}
   ports:
     keys:
     - baseCategories
@@ -1101,7 +1101,7 @@ MonoBehaviour:
   m_Name: hat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -88, y: -2600}
+  position: {x: -120, y: -2488}
   ports:
     keys:
     - baseCategories
@@ -1144,7 +1144,7 @@ MonoBehaviour:
   m_Name: resource_health
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -168, y: -1592}
+  position: {x: -200, y: -1480}
   ports:
     keys:
     - baseCategories
@@ -1273,7 +1273,7 @@ MonoBehaviour:
   m_Name: equipment
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -792, y: -2328}
+  position: {x: -1080, y: -2392}
   ports:
     keys:
     - baseCategories
@@ -1531,7 +1531,7 @@ MonoBehaviour:
   m_Name: ability_health
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1000, y: -2072}
+  position: {x: 968, y: -1960}
   ports:
     keys:
     - baseCategories
@@ -2221,7 +2221,7 @@ MonoBehaviour:
   m_Name: resource
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -456, y: -1480}
+  position: {x: -488, y: -1368}
   ports:
     keys:
     - baseCategories
@@ -2267,7 +2267,7 @@ MonoBehaviour:
   m_Name: Category Set Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1273.5, y: -685.5}
+  position: {x: -2721.1636, y: -3373.2822}
   ports:
     keys: []
     values: []
@@ -2275,7 +2275,7 @@ MonoBehaviour:
   FILE_NAME: categories
   FILE_EXTENSION: json
   PROTECT_DATA: 0
-  _lastPath: E:/Repositories/PofyToolsProject/Assets/Resources/Definitions/categories.json
+  _lastPath: G:/Desktop/categories.json
 --- !u!114 &114409536000429942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2378,7 +2378,7 @@ MonoBehaviour:
   m_Name: stamina_potion
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 360, y: -1960}
+  position: {x: 328, y: -1848}
   ports:
     keys:
     - baseCategories
@@ -2559,7 +2559,7 @@ MonoBehaviour:
   m_Name: wooden_shiled
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -88, y: -2456}
+  position: {x: -120, y: -2344}
   ports:
     keys:
     - baseCategories
@@ -2765,7 +2765,7 @@ MonoBehaviour:
   m_Name: sword
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 696, y: -488}
+  position: {x: 664, y: -1256}
   ports:
     keys:
     - baseCategories
@@ -2808,7 +2808,7 @@ MonoBehaviour:
   m_Name: medicine
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -248, y: -1800}
+  position: {x: -280, y: -1688}
   ports:
     keys:
     - baseCategories
@@ -3376,7 +3376,7 @@ MonoBehaviour:
   m_Name: food
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -264, y: -1976}
+  position: {x: -280, y: -1848}
   ports:
     keys:
     - baseCategories
@@ -3754,7 +3754,7 @@ MonoBehaviour:
   m_Name: ability_focus
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1000, y: -1800}
+  position: {x: 968, y: -1688}
   ports:
     keys:
     - baseCategories
@@ -3800,7 +3800,7 @@ MonoBehaviour:
   m_Name: shield
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -440, y: -2376}
+  position: {x: -472, y: -2264}
   ports:
     keys:
     - baseCategories
@@ -3932,7 +3932,7 @@ MonoBehaviour:
   m_Name: ability_stamina
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1000, y: -1944}
+  position: {x: 968, y: -1832}
   ports:
     keys:
     - baseCategories
@@ -4229,7 +4229,7 @@ MonoBehaviour:
   m_Name: mage_hat
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 200, y: -2584}
+  position: {x: 168, y: -2472}
   ports:
     keys:
     - baseCategories
@@ -4444,7 +4444,7 @@ MonoBehaviour:
   m_Name: iron_sword
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 952, y: -600}
+  position: {x: 936, y: -1160}
   ports:
     keys:
     - baseCategories
@@ -4708,7 +4708,7 @@ MonoBehaviour:
   m_Name: potion
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 24, y: -1848}
+  position: {x: -8, y: -1736}
   ports:
     keys:
     - baseCategories

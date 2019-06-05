@@ -19,8 +19,8 @@ namespace PofyTools
 
             if (type.Namespace == "PofyTools")
             {
-                if (type == typeof(CategorySetNode) && this._catGraph.HasSetNode)
-                    return null;
+                //if (type == typeof(CategorySetNode) && this._catGraph.HasSetNode)
+                //    return null;
                 return base.GetNodeMenuName(type).Replace("Pofy Tools/", "");
             }
             else
@@ -33,10 +33,10 @@ namespace PofyTools
             if (this._catGraph == null)
                 this._catGraph = this.target as CategoryGraph;
 
-            if (this._catGraph.HasSetNode)
-            {
-                this._catGraph.SetNode.position = NodeEditorWindow.current.WindowToGridPosition(Vector2.zero);
-            }
+            //if (this._catGraph.HasSetNode)
+            //{
+            //    this._catGraph.SetNode.position = NodeEditorWindow.current.WindowToGridPosition(Vector2.zero);
+            //}
 
             base.OnGUI();
         }
