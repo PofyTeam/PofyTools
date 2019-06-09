@@ -316,7 +316,7 @@
     /// <typeparam name="TKey"> Key Type.</typeparam>
     /// <typeparam name="TValue">Value Type.</typeparam>
     [System.Serializable]
-    public abstract class DataSet<TKey, TValue> : CollectionPair<TKey, TValue> where TValue : Data<TKey>
+    public abstract class DataSet<TKey, TValue> : CollectionPair<TKey, TValue> where TValue : IData<TKey>
     {
         #region CollectionPair
         protected override bool BuildDictionary()
@@ -329,9 +329,9 @@
             //Add content from list to dictionary
             foreach (var element in this._content)
             {
-                if (this.content.ContainsKey(element.id))
-                    Debug.LogWarning("Id " + element.id + " present in the set. Overwriting...");
-                this.content[element.id] = element;
+                if (this.content.ContainsKey(element.Id))
+                    Debug.LogWarning("Id \"" + element.Id + "\" present in the set. Overwriting...");
+                this.content[element.Id] = element;
             }
 
             return true;
@@ -341,7 +341,7 @@
         {
             if (this._content.AddOnce(data))
             {
-                this.content[data.id] = data;
+                this.content[data.Id] = data;
                 return true;
             }
 
@@ -352,7 +352,7 @@
         {
             if (this._content.Remove(data))
             {
-                this.content[data.id] = data;
+                this.content[data.Id] = data;
                 return true;
             }
             return false;
@@ -361,6 +361,66 @@
         #endregion
     }
 
+    public interface IData<T>
+    {
+
+        T Id { get; }
+    }
+    public abstract class Data<T> : IData<T>
+    {
+        public T id = default(T);
+        public T Id => this.id;
+
+        public static implicit operator T(Data<T> data)
+        {
+            return data.id;
+        }
+    }
+
+    #region JSON Approach
+    public abstract class Definition : Data<string>
+    {
+        //TODO: Implement fast hash search
+        [System.NonSerialized]
+        public int hash;
+
+        public override string ToString()
+        {
+            return this.id;
+        }
+    }
+    public class DefinableData<T> : Data<string>, IDefinable<T> where T : Definition
+    {
+        public DefinableData() { }
+        public DefinableData(T definition)
+        {
+            Define(definition);
+        }
+
+        #region IDefinable
+
+        public T Definition
+        {
+            get;
+            protected set;
+        }
+
+        public bool IsDefined { get { return this.Definition != null; } }
+
+        public void Define(T definition)
+        {
+            this.Definition = definition;
+            this.id = this.Definition.id;
+        }
+
+        public void Undefine()
+        {
+            this.Definition = null;
+            this.id = string.Empty;
+        }
+
+        #endregion
+    }
     /// <summary>
     /// Collection of definitions obtainable via key or index
     /// </summary>
@@ -492,62 +552,6 @@
         }
 
     }
-
-    public abstract class Data<T>
-    {
-        public T id = default(T);
-
-        public static implicit operator T(Data<T> data)
-        {
-            return data.id;
-        }
-    }
-
-    public abstract class Definition : Data<string>
-    {
-        //TODO: Implement fast hash search
-        [System.NonSerialized]
-        public int hash;
-
-        public override string ToString()
-        {
-            return this.id;
-        }
-    }
-
-    public class DefinableData<T> : Data<string>, IDefinable<T> where T : Definition
-    {
-        public DefinableData() { }
-        public DefinableData(T definition)
-        {
-            Define(definition);
-        }
-
-        #region IDefinable
-
-        public T Definition
-        {
-            get;
-            protected set;
-        }
-
-        public bool IsDefined { get { return this.Definition != null; } }
-
-        public void Define(T definition)
-        {
-            this.Definition = definition;
-            this.id = this.Definition.id;
-        }
-
-        public void Undefine()
-        {
-            this.Definition = null;
-            this.id = string.Empty;
-        }
-
-        #endregion
-    }
-
     public interface IDefinable<T> where T : Definition
     {
         T Definition
@@ -561,6 +565,122 @@
 
         void Undefine();
     }
+    #endregion JSON Approach
+
+    #region ScriptableObject Approach
+    public abstract class Config : ScriptableObject, IData<string>
+    {
+        [System.NonSerialized]
+        public int hash;
+
+        //public string id;
+
+        public string Id => this.name;
+
+        public override string ToString()
+        {
+            return this.name;
+        }
+    }
+
+    public class ConfigSet<T> : DataSet<string, T> where T : Config
+    {
+        public ConfigSet(T[] content)
+        {
+            this._content = new List<T>(content);
+        }
+    }
+
+    public class ConfigurableData<T> : Data<string>, IConfigurable<T> where T : Config
+    {
+        public ConfigurableData() { }
+        public ConfigurableData(T config)
+        {
+            Configure(config);
+        }
+
+        #region IConfigurable
+
+        public T Config
+        {
+            get;
+            protected set;
+        }
+
+        public bool IsConfigured { get { return this.Config != null; } }
+
+        public void Configure(T definition)
+        {
+            this.Config = definition;
+            this.id = this.Config.Id;
+        }
+
+        public void Unconfigure()
+        {
+            this.Config = null;
+            this.id = string.Empty;
+        }
+
+        #endregion
+    }
+
+    /// <summary>
+    /// Collection of loaded data.
+    /// </summary>
+    /// <typeparam name="TData">Data Type</typeparam>
+    /// <typeparam name="TConfig">Definition Type</typeparam>
+    [System.Serializable]
+    public class ConfigurableDataSet<TData, TConfig> : DataSet<string, TData> where TConfig : Config where TData : ConfigurableData<TConfig>, new()
+    {
+        public ConfigurableDataSet() { }
+
+        public ConfigurableDataSet(ConfigSet<TConfig> configSet)
+        {
+            Initialize(configSet.GetContent());
+        }
+
+        public ConfigurableDataSet(List<TConfig> _content)
+        {
+            Initialize(_content);
+        }
+
+        public bool Initialize(List<TConfig> _content)
+        {
+            foreach (var element in _content)
+            {
+                TData data = new TData();
+                data.Configure(element);
+
+                this._content.Add(data);
+            }
+
+            return Initialize();
+        }
+
+        public void ConfigureSet(ConfigSet<TConfig> configSet)
+        {
+            foreach (var data in this._content)
+            {
+                data.Configure(configSet.GetValue(data.id));
+            }
+        }
+
+    }
+
+    public interface IConfigurable<T> where T : Config
+    {
+        T Config { get; }
+
+        bool IsConfigured { get; }
+
+        void Configure(T config);
+
+        void Unconfigure();
+    }
+
+    #endregion ScriptableObject Approach
+
+
 
     public interface IDatable<TKey, TValue> where TValue : Data<TKey>
     {
