@@ -275,9 +275,10 @@
             list.AddRange(this.content.Keys);
         }
 
-        public bool ContainsKey(TKey key)
+        public virtual bool ContainsKey(TKey key)
         {
-            return this.content.ContainsKey(key);
+            if (this.IsInitialized) return this.content.ContainsKey(key);
+            return false;
         }
 
         public bool ContainsValue(TValue value)
@@ -287,7 +288,9 @@
 
         public bool TryGetValue(TKey key, out TValue outValue)
         {
-            return this.content.TryGetValue(key, out outValue);
+            if (this.IsInitialized)return this.content.TryGetValue(key, out outValue);
+            outValue = default;
+            return default;
         }
 
         //public TValue this[TKey arg]
@@ -341,7 +344,8 @@
         {
             if (this._content.AddOnce(data))
             {
-                this.content[data.Id] = data;
+                if (this.IsInitialized)
+                    this.content[data.Id] = data;
                 return true;
             }
 
@@ -352,10 +356,16 @@
         {
             if (this._content.Remove(data))
             {
-                this.content[data.Id] = data;
+                if (this.IsInitialized)
+                    this.content[data.Id] = data;
                 return true;
             }
             return false;
+        }
+
+        public override bool ContainsKey(TKey key)
+        {
+            return (this.IsInitialized) ? this.content.ContainsKey(key) : this._content.Exists(x => x.Id.Equals(key));
         }
 
         #endregion
@@ -648,21 +658,38 @@
         {
             foreach (var element in _content)
             {
-                TData data = new TData();
-                data.Configure(element);
-
-                this._content.Add(data);
+                AddData(element);
             }
 
             return Initialize();
         }
 
-        public void ConfigureSet(ConfigSet<TConfig> configSet)
+        public void ConfigureSet(ConfigSet<TConfig> configSet, bool extend = false)
         {
-            foreach (var data in this._content)
+            //foreach (var data in this._content)
+            //{
+            //    data.Configure(configSet.GetValue(data.id));
+            //}
+            TData data = null;
+            foreach (var config in configSet)
             {
-                data.Configure(configSet.GetValue(data.id));
+                if (this.TryGetValue(config.Id, out data))
+                {
+                    data.Configure(config);
+                }
+                else
+                {
+                    AddData(config);
+                }
             }
+        }
+
+        public bool AddData(TConfig config)
+        {
+            TData data = new TData();
+            data.Configure(config);
+            AddContent(data);
+            return true;
         }
 
     }
