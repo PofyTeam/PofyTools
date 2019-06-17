@@ -1,4 +1,4 @@
-﻿
+﻿#if ADS
 using Extensions;
 using GoogleMobileAds.Api;
 using System;
@@ -465,3 +465,4 @@ namespace PofyTools
 }
 
 
+#endif

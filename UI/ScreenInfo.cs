@@ -40,7 +40,7 @@ namespace PofyTools
         public bool IsActive { get { return this.gameObject.activeSelf; } }
         public void Free()
         {
-            RemoveAllStates(false);
+            PurgeStateStack();
             this._pool.Free(this);
         }
 
