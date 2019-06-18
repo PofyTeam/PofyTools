@@ -14,19 +14,12 @@ namespace PofyTools
             this.id = key;
         }
 
-        //[Header("Display Name")]
-        //public string displayName;
-
-        //[Header("Category Description Id")]
-        //[FormerlySerializedAs("categoryDescription")]
-        //public string descriptionId;
-
         [Header("Base Categories")]
         [FormerlySerializedAs("baseCategories")]
         public List<string> baseIds = new List<string>();
 
     }
-
+    [System.Obsolete ("No real extension only utility stuff. Should be removed.")]
     public class CategoryDefinitionSet : DefinitionSet<CategoryDefinition>
     {
         public CategoryDefinitionSet(string fullPath, string filename, bool scramble = false, bool encode = false, string extension = "") : base(fullPath, filename, scramble, encode, extension)
@@ -43,8 +36,6 @@ namespace PofyTools
                     this._content.RemoveAt(i);
                     continue;
                 }
-
-                //element.displayName = (string.IsNullOrEmpty(element.displayName)) ? element.id.ToTitle() : element.displayName;
 
                 element.baseIds.RemoveAll(x => string.IsNullOrEmpty(x));
                 element.baseIds.Remove(element.id);
@@ -65,7 +56,6 @@ namespace PofyTools
         public CategoryData(CategoryDefinition definition) : base(definition) { }
 
         #region API
-
         public void AddSubcategory(CategoryData data)
         {
             this._subcategories.AddOnce(data);
@@ -103,7 +93,6 @@ namespace PofyTools
 
         #region Runtime Data
         public List<CategoryData> _subcategories = new List<CategoryData>();
-
         public List<CategoryData> _supercategories = new List<CategoryData>();
         #endregion
 
@@ -227,7 +216,6 @@ namespace PofyTools
                     }
                 }
 
-                //PofyTools.UI.NotificationView.Show("Game Definitions Initialized!", null, -1f);
                 this.IsInitialized = true;
                 return true;
             }

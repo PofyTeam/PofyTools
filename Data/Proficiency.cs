@@ -11,92 +11,76 @@ namespace PofyTools
             this.id = id;
         }
 
-        public List<ProficiencyLevel> levels = new List<ProficiencyLevel>();
+        /// <summary>
+        /// Level represents key-value pair collection where key is current level (index + 1) and the value is required points for next level
+        /// </summary>
+        public int[] levels = new int[0];
     }
 
-    [System.Serializable]
-    public class ProficiencyLevel
-    {
-        public int requiredPoints;
-        public float value = 0f;
-    }
+    //[System.Serializable]
+    //public class ProficiencyLevel
+    //{
+    //    public int requiredPoints;
+    //    public float value = 0f;
+    //}
 
     [System.Serializable]
     public class ProficiencyData : DefinableData<ProficiencyDefinition>
     {
+        #region Constructors
         public ProficiencyData() { }
 
         public ProficiencyData(ProficiencyDefinition definition) : base(definition)
         {
         }
+        #endregion
 
-        [SerializeField]
-        private int _currentLevelIndex;
-
+        #region Serializable Data
+        [SerializeField] private int _currentLevelIndex;
         public int CurrentLevelIndex { get { return this._currentLevelIndex; } }
 
-        public int currentPointCount;
-
-        [System.NonSerialized]
-        public float buff = 0f;
-        [System.NonSerialized]
-        public float _inheritedBuff = 0f;
-
-        public float TotalBuff { get { return buff + _inheritedBuff; } }
+        [SerializeField] public int _currentPointCount;
+        public int CurrentPointCount => this._currentPointCount;
+        #endregion
 
         #region API
-
-        public string DisplayLevel
-        {
-            get { return (HasNextLevel) ? (_currentLevelIndex + 1).ToString() : (_currentLevelIndex + 1).ToString() + "(MAX)"; }
-        }
-
         /// <summary>
-        /// Current Proficiency Level data
+        /// Formatted string for displaying current level (index + 1).
         /// </summary>
-        public ProficiencyLevel CurrentLevel
-        {
-            get { return this.Definition.levels[_currentLevelIndex]; }
-        }
+        public string DisplayLevel => (this.HasNextLevel) ? (this._currentLevelIndex + 1).ToString() : (this._currentLevelIndex + 1).ToString() + "(MAX)";
 
         /// <summary>
         /// Is next level of proficiency available
         /// </summary>
-        public bool HasNextLevel
-        {
-            get { return this.Definition.levels.Count - 1 > this._currentLevelIndex; }
-        }
+        public bool HasNextLevel => this.Definition.levels.Length - 1 > this._currentLevelIndex;
 
         /// <summary>
         /// Required points for next level of proficiency.
         /// </summary>
-        public int NextLevelRequirements
-        {
-            get { return this.Definition.levels[this._currentLevelIndex + 1].requiredPoints; }
-        }
+        public int NextLevelRequirements => this.HasNextLevel ? this.Definition.levels[this._currentLevelIndex + 1] : int.MaxValue;
 
         public bool AddPoints(int amount = 1)
         {
-            this.currentPointCount += amount;
-            Debug.Log(this.id + " current point count: " + this.currentPointCount + " current level: " + this.DisplayLevel);
+            this._currentPointCount += amount;
+            Debug.Log(this.id + " current point count: " + this._currentPointCount + " current level: " + this.DisplayLevel);
             return false;
         }
         #endregion
 
-        public void AddLevel()
+        public void LevelUp()
         {
             this._currentLevelIndex++;
 
-            this.buff += this.CurrentLevel.value;
+            //this.buff += this.CurrentLevel.value;
             Debug.Log("Level Up! " + this.id);
         }
 
         public void ApplyPoints()
         {
-            while (this.HasNextLevel && this.currentPointCount >= this.NextLevelRequirements)
+            while (this.HasNextLevel && this._currentPointCount >= this.NextLevelRequirements)
             {
-                this.currentPointCount -= this.NextLevelRequirements;
-                AddLevel();
+                this._currentPointCount -= this.NextLevelRequirements;
+                LevelUp();
             }
         }
 
@@ -114,7 +98,6 @@ namespace PofyTools
         #region API
         public void AddPoints(CategoryData.Descriptor descriptor, int amount = 1)
         {
-
             foreach (var superactegory in descriptor.supercategoryIds)
             {
                 GetValue(superactegory).AddPoints(amount);
@@ -159,4 +142,18 @@ namespace PofyTools
         #endregion
     }
 
+    /// <summary>
+    /// Generic proficiency reward solver.
+    /// </summary>
+    /// <typeparam name="TKey"></typeparam>
+    /// <typeparam name="TValue"></typeparam>
+    public class ProficiencyRewardSolver<TKey, TValue>
+    {
+        //category id
+        public string id;
+        //reward key
+        public TKey key;
+        //reward for each proficiency level
+        public TValue[] values;
+    }
 }
