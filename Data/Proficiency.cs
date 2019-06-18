@@ -17,13 +17,6 @@ namespace PofyTools
         public int[] levels = new int[0];
     }
 
-    //[System.Serializable]
-    //public class ProficiencyLevel
-    //{
-    //    public int requiredPoints;
-    //    public float value = 0f;
-    //}
-
     [System.Serializable]
     public class ProficiencyData : DefinableData<ProficiencyDefinition>
     {
@@ -103,7 +96,14 @@ namespace PofyTools
                 GetValue(superactegory).AddPoints(amount);
             }
 
-            GetValue(descriptor.id).AddPoints(amount);
+            var data = GetValue(descriptor.id);
+            if (data != null)
+            {
+                data.AddPoints(amount);
+                return;
+            }
+            Debug.LogErrorFormat("Id \"{0}\" not found!", descriptor.id);
+
         }
 
         public void ApplyPoints()
@@ -114,30 +114,30 @@ namespace PofyTools
             }
         }
 
-        public void CalculateBuffs(CategoryDataSet categoryDataSet)
-        {
-            //Calculate self buff for each data
-            foreach (var data in this._content)
-            {
-                data.buff = 0f;
-                data._inheritedBuff = 0f;
+        //public void CalculateBuffs(CategoryDataSet categoryDataSet)
+        //{
+        //    //Calculate self buff for each data
+        //    foreach (var data in this._content)
+        //    {
+        //        data.buff = 0f;
+        //        data._inheritedBuff = 0f;
 
-                for (int i = data.CurrentLevelIndex; i >= 0; --i)
-                {
-                    data.buff += data.Definition.levels[i].value;
-                }
-            }
+        //        for (int i = data.CurrentLevelIndex; i >= 0; --i)
+        //        {
+        //            data.buff += data.Definition.levels[i].value;
+        //        }
+        //    }
 
-            //add buffs to subcategories
-            foreach (var data in this._content)
-            {
-                foreach (var subId in categoryDataSet.GetValue(data.id).descriptor.subcategoryIds)
-                {
-                    GetValue(subId)._inheritedBuff += data.buff;
-                }
-            }
+        //    //add buffs to subcategories
+        //    foreach (var data in this._content)
+        //    {
+        //        foreach (var subId in categoryDataSet.GetValue(data.id).descriptor.subcategoryIds)
+        //        {
+        //            GetValue(subId)._inheritedBuff += data.buff;
+        //        }
+        //    }
 
-        }
+        //}
 
         #endregion
     }
