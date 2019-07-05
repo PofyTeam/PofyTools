@@ -137,12 +137,16 @@
 
     public interface IInitializable
     {
-        bool IsInitialized
-        {
-            get;
-        }
+        bool IsInitialized { get; }
 
         bool Initialize();
+    }
+
+    public interface IInitializable<TContext> where TContext : struct
+    {
+        bool IsInitialized { get; }
+        TContext InitContext { get; }
+        bool Initialize(TContext context);
     }
 
     public interface ISubscribable
