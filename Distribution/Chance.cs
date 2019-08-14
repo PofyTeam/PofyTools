@@ -1,7 +1,7 @@
-﻿namespace PofyTools
+﻿namespace PofyTools.Distribution
 {
-    using UnityEngine;
-    using System.Collections;
+	using UnityEngine;
+	using System.Collections;
 
     /// <summary>
     /// Distribution based on chance with optional Auto Deck Size
@@ -15,11 +15,9 @@
         /// Gets or sets a value indicating whether this <see cref="PofyTools.Distribution.Chance"/> auto deck size.
         /// </summary>
         /// <value><c>true</c> if auto deck size; otherwise, <c>false</c>.</value>
-        public bool autoDeckSize
-        {
+        public bool autoDeckSize {
             get { return this._autoDeckSize; }
-            set
-            {
+            set {
                 if (value != this._autoDeckSize)
                     this._autoDeckSize = value;
                 else
@@ -33,13 +31,10 @@
         /// Gets or sets the chance (0 - 1).
         /// </summary>
         /// <value>The chance.</value>
-        public float chance
-        {
+        public float chance {
             get { return this._chance; }
-            set
-            {
-                if (value != this._chance)
-                {
+            set {
+                if (value != this._chance) {
                     this._chance = value;
                     BuildDeck ();
                 }
@@ -47,8 +42,7 @@
             }
         }
 
-        public float percent
-        {
+        public float percent {
             get { return this._chance * 100; }
         }
 
@@ -58,20 +52,16 @@
         /// Gets total card count in distribution deck.
         /// </summary>
         /// <value>The count.</value>
-        public int Count
-        {
+        public int Count {
             get { return this._deck.Count; }
         }
 
-        public bool Value
-        {
-            get { return this._deck.PickNextCard ().instance; }
+        public bool Value {
+            get { return this._deck.PickNextCard ().Element; }
         }
 
-        public bool RandomValue
-        {
-            get
-            {
+        public bool RandomValue {
+            get {
                 return Random.Range (0f, 1f) < this._chance;
             }
         }
@@ -85,52 +75,30 @@
         {
             int deckSize = 0;
             float percent = this._chance * 100;
-            if (this._autoDeckSize)
-            {
-                if (percent % 100 == 0)
-                {
+            if (this._autoDeckSize) {
+                if (percent % 100 == 0) {
                     deckSize = 1;
-                }
-                else if (percent % 50 == 0)
-                {
+                } else if (percent % 50 == 0) {
                     deckSize = 2;
-                }
-                else if (percent % 25 == 0)
-                {
+                } else if (percent % 25 == 0) {
                     deckSize = 4;
-                }
-                else if (percent % 20 == 0)
-                {
+                } else if (percent % 20 == 0) {
                     deckSize = 5;
-                }
-                else if (percent % 10 == 0)
-                {
+                } else if (percent % 10 == 0) {
                     deckSize = 10;
-                }
-                else if (percent % 5 == 0)
-                {
+                } else if (percent % 5 == 0) {
                     deckSize = 20;
-                }
-                else if (percent % 4 == 0)
-                {
+                } else if (percent % 4 == 0) {
                     deckSize = 25;
-                }
-                else if (percent % 2 == 0)
-                {
+                } else if (percent % 2 == 0) {
                     deckSize = 50;
-                }
-                else if (percent % 1 == 0)
-                {
+                } else if (percent % 1 == 0) {
                     deckSize = 100;
-                }
-                else
-                {
+                } else {
                     deckSize = 1000;
                 }
 
-            }
-            else
-            {
+            } else {
                 deckSize = 1000;
             }
 
@@ -164,8 +132,7 @@
 
         #region Static Methods
 
-        public static bool FiftyFifty
-        {
+        public static bool FiftyFifty {
             get { return Random.Range (0, 2) > 0; }
         }
 
